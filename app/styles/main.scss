@@ -121,6 +121,19 @@ body {
     }
 
 
+    &.repellent {
+      grid-template-columns: 1fr 59%;
+      grid-column-gap: 30px;
+      .info {
+        margin-right: 40px;
+      }
+      img {
+        transform: translateY(var(--rep));
+        will-change: transform;
+      }
+    }
+
+
     &.fieldTesting {
       .oneInfo {
         color: #ff9349;
@@ -133,31 +146,24 @@ body {
     }
 
 
+
+    &.heatRetention {
+      grid-template-columns: 1fr 59%;
+      grid-column-gap: 30px;
+      .info {
+        margin-right: 40px;
+      }
+      img {
+        transform: translateY(var(--heat));
+        will-change: transform;
+      }
+    }
+    
+
+
     &.uld {
       .mainImage {
         padding-right: 20px;
-      }
-    }
-  
-
-    &.heattech {
-      grid-template-columns: 50% 1fr;
-      grid-column-gap: 50px;
-      .heatMainImg {
-        opacity: var(--heattech);
-        will-change: opacity;
-      }
-      .oneInfo {
-        float: right;
-        img {
-          display: inline-block;
-          width: 80px;
-        }
-        div {
-          display: inline-block;
-          width: 80%;
-          width: calc(100% - 100px);
-        }
       }
     }
 
@@ -207,32 +213,6 @@ body {
       }
       img {
         transform: translateY(var(--fibers));
-        will-change: transform;
-      }
-    }
-
-    &.repellent {
-      grid-template-columns: 1fr 59%;
-      grid-column-gap: 30px;
-      .info {
-        margin-right: 40px;
-      }
-      img {
-        transform: translateY(var(--rep));
-        will-change: transform;
-      }
-    }
-
-
-
-    &.heatRetention {
-      grid-template-columns: 1fr 59%;
-      grid-column-gap: 30px;
-      .info {
-        margin-right: 40px;
-      }
-      img {
-        transform: translateY(var(--heat));
         will-change: transform;
       }
     }

@@ -52,15 +52,6 @@
         <!-- ————————————————————————————————————o————————————————————————————————————o WATER REPELLENT -->
             <!-- WATER REPELLENT -->
         <!-- ————————————————————————————————————o————————————————————————————————————o WATER REPELLENT -->
-        <!-- <section class="panel microFibers" data-color="blue">
-          <div class="info">
-              <article class="oneInfo sectionHeader">
-                  <h2>Durable Water Repellency</h2>
-                  <p>PlumaFill synthetic insulation and a patent-pending construction technique create an ultralight jacket with the best warmth for weight we’ve ever achieved—down or synthetic.</p>
-              </article>
-          </div>
-          <img class="mainImage fibers" src="images/downJacket_flipped.png" />
-        </section> -->
         <section class="panel repellent" data-color="blue">
             <div class="info">
                 <article class="oneInfo sectionHeader">
@@ -203,62 +194,6 @@
         </section>
 
 
-
-
-
-
-        <!-- ————————————————————————————————————o————————————————————————————————————o HEATTECH -->
-            <!-- HEATTECH -->
-        <!-- ————————————————————————————————————o————————————————————————————————————o HEATTECH -->
-        <section class="panel heattech" data-color="heattech">
-            <img class="heatMainImg" style="width:100%;" src="images/warmCore.png" />
-            <div class="info">
-                <article class="oneInfo sectionHeader">
-                    <h2>HEATTECH</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue ligula ligula, vitae blandit velit imperdiet ultrices. Proin cursus pulvinar condimentum.</p>
-                </article>
-              <!-- <article class="oneInfo">
-                  <img src="images/star.gif" />
-                  <div>
-                    <h3>Heat Absorption</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue ligula ligula, vitae blandit velit imperdiet ultrices. Proin cursus pulvinar condimentum.</p>
-                  </div>
-              </article>
-              <article class="oneInfo">
-                  <img src="images/moisture.gif" />
-                  <div>
-                    <h3>Moisture Wicking</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue ligula ligula, vitae blandit velit imperdiet ultrices. Proin cursus pulvinar condimentum.</p>
-                  </div>
-              </article> -->
-            </div>
-        </section>
-
-
-
-
-        <!-- <div class="panel" data-color="indigo">
-          <h2>Indigo panel</h2>
-        </div>
-        <div class="panel" data-color="violet">
-          <h2>Violet</h2>
-        </div>
-        <div class="panel" data-color="green">
-          <h2>Green panel</h2>
-        </div>
-        <div class="panel" data-color="yellow">
-          <h2>Yellow panel</h2>
-        </div>
-        <div class="panel" data-color="orange">
-          <h2>Orange panel</h2>
-        </div>
-        <div class="panel" data-color="red">
-          <h2>Red panel</h2>
-        </div> -->
-
-
-
-
     </div>
 
 
@@ -312,21 +247,6 @@
 
 
 
-    const packable = basicScroll.create({
-      elem: document.querySelector('.lightImage'),
-      from: 'top-bottom',
-      to: 'bottom-top',
-      props: {
-        '--packable': {
-          from: '400px',
-          to: '-270px'
-        }
-      }
-    })
-    packable.start()
-
-
-
     const heatRetention = basicScroll.create({
       elem: document.querySelector('.heatImage'),
       from: 'top-bottom',
@@ -339,6 +259,21 @@
       }
     })
     heatRetention.start()
+
+
+
+    const lightweight = basicScroll.create({
+      elem: document.querySelector('.lightImage'),
+      from: 'top-bottom',
+      to: 'bottom-top',
+      props: {
+        '--packable': {
+          from: '400px',
+          to: '-270px'
+        }
+      }
+    })
+    lightweight.start()
 
 
 
@@ -371,23 +306,6 @@
       }
     })
     iceCave.start()
-
-
-
-
-
-    const heattech = basicScroll.create({
-      elem: document.querySelector('.heatMainImg'),
-      from: 'top-bottom',
-      to: 'middle-middle',
-      props: {
-        '--heattech': {
-          from: -0.5,
-          to: .99
-        }
-      }
-    })
-    heattech.start()
 
 
 
@@ -484,39 +402,6 @@ $(window).scroll(function() {
         // console.log('top_of_screen: ' + top_of_screen);
       }
     });
-
-
-
-    // $(window).scroll(function() {
-    //   var scrollTop     = $(window).scrollTop(),
-    //   elementOffset = $('.videoContainer').offset().top,
-    //   distance      = (elementOffset - scrollTop);
-    //   console.log('distance: ' + distance)
-
-
-    //   if (distance >= 500) {
-    //     $('.uldVideo').addClass('fadeOut');
-    //     $('.uldVideo').removeClass('fadeIn');
-      
-
-    //   } else if (distance < 500) {
-    //     $('.uldVideo').removeClass('fadeOut');
-    //     $('.uldVideo').addClass('fadeIn');
-
-      
-    //   } else if (distance < 280) {
-    //     $('.uldVideo').removeClass('fadeIn');
-    //     $('.uldVideo').addClass('fadeOut');
-    //   } 
-      
-      
-    //   if (distance < -250) {
-    //     $('.uldVideo').removeClass('fadeIn');
-    //     $('.uldVideo').addClass('fadeOut');
-    //   }
-    // });
-
-
 
 
 
