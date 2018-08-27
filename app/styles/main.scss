@@ -162,18 +162,15 @@ body {
     }
 
 
-    &.staticImage {
+
+    &.paraBack {
       grid-template-columns: 1fr;
       grid-template-rows: calc(100vh - 200px);
+      align-items: end;
 
       margin: 200px auto;
       margin: 3px auto;
-    }
 
-
-
-    &.paraBack {
-      align-items: end;
       height: calc(100vh - 200px);
       background-attachment: fixed;
       background-position: center;
