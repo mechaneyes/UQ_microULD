@@ -96,6 +96,11 @@ body {
     .rightImage {
       border: 1px solid red;
     }
+
+    .flipped {
+      transform: scaleX(-1);
+      filter: FlipH;
+    }
   
   
 
@@ -122,19 +127,26 @@ body {
 
 
     &.repellent {
-      grid-template-columns: 1fr 59%;
-      grid-column-gap: 30px;
-      .info {
-        margin-right: 40px;
-      }
-      img {
+      grid-template-columns: 1fr 52%;
+      grid-column-gap: 40px;
+      .mainImage {
         transform: translateY(var(--rep));
         will-change: transform;
+      }
+      .oneInfo {
+        img {
+          float: left;
+          // width: 80%;
+          width: auto;
+          height: 200px;
+          margin-top: 30px;
+        }
       }
     }
 
 
     &.fieldTesting {
+      grid-template-columns: 45% 1fr;
       .oneInfo {
         color: #ff9349;
         color: white;
@@ -143,22 +155,57 @@ body {
         transform: translateY(var(--field));
         will-change: transform;
       }
+      .stackedImages {
+        position: relative;
+        .mainImage {
+          &:first-child {
+            width: 400px;
+          }
+          &:nth-child(2) {
+            position: absolute;
+            top: 130px;
+            left: 0px;
+          }
+          &:nth-child(3) {
+            position: absolute;
+            top: 250px;
+            left: 250px;
+            width: 300px;
+          }
+        }
+      }
     }
 
 
 
     &.heatRetention {
-      grid-template-columns: 1fr 59%;
+      grid-template-columns: 1fr 55%;
+      grid-column-gap: 20px;
+      img.mainImage {
+        justify-self: end;
+        transform: translateY(var(--heat));
+        will-change: transform;
+      }
+      img.thumb {
+        width: 50%;
+        margin-top: 30px;
+      }
+    }
+
+
+
+    &.lightweight {
+      grid-template-columns: 1fr 41%;
       grid-column-gap: 30px;
       .info {
         margin-right: 40px;
       }
       img {
-        transform: translateY(var(--heat));
+        transform: translateY(var(--light));
         will-change: transform;
       }
     }
-    
+
 
 
     &.uld {
@@ -168,22 +215,56 @@ body {
     }
 
 
-    &.staticImage {
-      grid-template-columns: 1fr;
-      grid-template-rows: calc(100vh - 200px);
 
-      margin: 200px auto;
-      margin: 3px auto;
+    &.recap {
+      grid-template-columns: 1fr 41%;
+      grid-column-gap: 60px;
+      margin-bottom: 500px;
+      .info {
+        .recapCol {
+          padding-top: 30px;
+          &:last-child {
+            margin-left: 40px;
+          }
+        }
+        .recapItem {
+          display: block;
+          clear: both;
+          img {
+            margin-right: 15px;
+            padding-bottom: 30px;
+          }
+          p {
+            word-wrap: break-word;
+          }
+        }
+      }
+      img.mainImage {
+        width: 113%;
+        margin-left: -60px;
+        transform: translateY(var(--recap));
+        will-change: transform;
+      }
+      .recapCol {
+        float: left;
+        display: block;
+        width: 45%;
+      }
     }
 
 
 
     &.paraBack {
+      grid-template-columns: 1fr;
+      grid-template-rows: calc(100vh - 200px);
+
+      margin: 200px auto;
+      margin: 3px auto;
+
       align-items: end;
       height: calc(100vh - 200px);
       background-attachment: fixed;
       background-position: center;
-      // background-size: cover;
       background-repeat: no-repeat;
       p {
         bottom: 0;
@@ -192,15 +273,20 @@ body {
         font-size: 26px;
       }
     }
+    &.paraBack00 {
+      background-image: url(../images/uldBackThreads.jpg);
+    }
     &.paraBack01 {
-      margin-top: 200px;
-      background-image: url(../images/loom.jpg);
+      background-image: url(../images/uldBackLoom01.jpg);
     }
     &.paraBack02 {
-      background-image: url(../images/loom02.jpg);
+      background-image: url(../images/uldBackLoom02.jpg);
     }
     &.paraBack03 {
-      background-image: url(../images/tweezers.jpg);
+      background-image: url(../images/uldBackPremiumDown.jpg);
+    }
+    &.paraBack04 {
+      background-image: url(../images/uldBackTweezers.jpg);
     }
 
 
@@ -246,17 +332,25 @@ body {
           margin-bottom: 40px;
         }
       }
+      .gall00 {
+        margin-bottom: 60px;
+        p {
+          width: 66%;
+        }
+      }
       .gall01 {
         display: grid;
-        grid-template-columns: 60% 1fr;
+        grid-template-columns: 66% 1fr;
         grid-template-rows: 1fr;
+        grid-column-gap: 20px;
         justify-content: center;
         align-items: center;
-        margin-right: 75px;
+        // margin-right: 75px;
         img.rainy {
           justify-self: end;
           width: 86%;
-          margin-right: 20px;
+          width: 100%;
+          // margin-right: 20px;
           transform: translateY(var(--rainy));
           will-change: transform;
         }
@@ -272,9 +366,9 @@ body {
         justify-content: center;
         align-items: center;
         img.iceCave {
-          justify-self: end;
           width: 100%;
-          transform: translateY(var(--iceCave));
+          width: 80%;
+          transform: translateY(var(--theCave));
           will-change: transform;
         }
       }
@@ -289,11 +383,17 @@ body {
           left: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          // object-fit: cover;
           z-index: -1;
+          transform: translateY(var(--method));
+          will-change: transform;
         }
       }
     }
+  }
+  // Fixed backgrounds - setting the element rel to position text
+  .production {
+    position: relative;
   }
 }
 
@@ -330,6 +430,12 @@ body {
     color: white;
     background: black;
     transition: all 0.3s;
+  }
+}
+
+@media (min-width: 1281px) {
+  .theCtas .zeroCTA {
+    font-size: 14px;
   }
 }
 
@@ -372,17 +478,66 @@ video {
 }
 
 
-/* colours */
+
+
+
+
+
+
+
+
+// ————————————————————————————————————o————————————————————————————————————o COLORS -->
+// COLORS COLOURS -->
+// ————————————————————————————————————o————————————————————————————————————o COLORS -->
+
+.color-heat {
+  background-color: #f3913b;
+}
+.color-gallery {
+  background-color: #4DCF42;
+  background-color: #ee720e;
+}
+.color-limey {
+  background-color: #b6e600;
+}
+.color-pistacio {
+  background-color: #a8e4a6;
+}
+.color-silver {
+  background-color: #b7b7b7;
+}
+.color-lightweight {
+  background-color: #c6ce67;
+}
+.color-lightweightGreen {
+  background-color: #74B891;
+}
+.color-lightweightGreenDarker {
+  background-color: #47A46E;
+}
+.color-lightweightGreenDarker {
+  background-color: #47A46E;
+}
+.color-darkerOrange {
+  background-color: #eab968;
+}
+.color-cyan {
+  background-color: #29D3F9;
+}
+.color-darkerCyan {
+  background-color: #00BBE5;
+}
+
+
+
+
+
 .color-violet {
   background-color: #7A4EAB;
 }
 .color-indigo {
   background-color: #4332CF;
 }
-
-
-
-
 .color-blue {
   background-color: #4CA6FF;
 }
@@ -396,29 +551,6 @@ video {
   background-color: #e1382d;
   background-color: #EDA62F;
 }
-.color-darkerOrange {
-  background-color: #D98700;
-  // background-color: #f7af36;
-}
-
-
-
-
-.color-gallery {
-  background-color: #4DCF42;
-  background-color: #ee720e;
-}
-.color-limey {
-  background-color: #b6e600;
-}
-.color-pistacio {
-  background-color: #a8e4a6;
-}
-
-
-
-
-
 .color-yellow {
   background-color: #FAEB33;
 }
