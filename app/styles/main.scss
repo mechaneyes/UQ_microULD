@@ -14,13 +14,18 @@ body {
   color: #000;
   background-color: #f4f4f4;
   transition: background-color 1s ease;
-  margin: 24px;
-
-  * {
-    box-sizing: border-box;
-  }
+  // margin: 24px;
 }
 
+#main {
+  transition: background-color 1s ease;
+}
+
+.back-to-top.show-back-top {
+  display: none;
+}
+
+.pt_primary #main .primary-content #coloursScrl,
 #coloursScrl {
   max-width: 1222px;
   margin: 0 auto;
@@ -28,9 +33,27 @@ body {
   transform-style: preserve-3d;
   overflow-x: hidden;
   overflow-y: scroll;
+  transition: background-color 1s ease;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: none;
+    max-height: none;
+  }
 
   h1 {
     margin-bottom: 20px;
+  }
+
+  h2 {
+    font-family: $font-UQReg;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 0;
+    border-bottom: none;
   }
 
   h3 {
@@ -38,7 +61,11 @@ body {
   }
 
   p {
-    margin-top: 0;
+    margin: 0;
+    font-family: $font-dinLight;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
   }
 
   .panel {
@@ -274,19 +301,19 @@ body {
       }
     }
     &.paraBack00 {
-      background-image: url(../images/uldBackThreads.jpg);
+      background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackThreads?$jpgMQ$');
     }
     &.paraBack01 {
-      background-image: url(../images/uldBackLoom01.jpg);
+      background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackLoom01?$jpgMQ$');
     }
     &.paraBack02 {
-      background-image: url(../images/uldBackLoom02.jpg);
+      background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackLoom02?$jpgMQ$');
     }
     &.paraBack03 {
-      background-image: url(../images/uldBackPremiumDown.jpg);
+      background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackPremiumDown?$jpgMQ$');
     }
     &.paraBack04 {
-      background-image: url(../images/uldBackTweezers.jpg);
+      background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackTweezers?$jpgMQ$');
     }
 
 
@@ -365,7 +392,21 @@ body {
         grid-template-rows: 1fr;
         justify-content: center;
         align-items: center;
+        img {
+          transform: translateY(var(--chinatown));
+          will-change: transform;
+        }
+      }
+      .gall03b {
         img.iceCave {
+          float: right;
+          width: 100%;
+          width: 80%;
+        }
+      }
+      .gall03c {
+        img {
+          float: left;
           width: 100%;
           width: 80%;
           transform: translateY(var(--theCave));
@@ -375,6 +416,7 @@ body {
       .gall04 {
         position: relative;
         height: 620px;
+        // margin-bottom: 200px;
         overflow: hidden;
         video {
           // opacity: 0;
@@ -387,6 +429,67 @@ body {
           z-index: -1;
           transform: translateY(var(--method));
           will-change: transform;
+        }
+      }
+      .gall05 {
+        position: relative;
+        // margin-bottom: 300px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+        img.nyc {
+          justify-self: end;
+          width: 86%;
+        }
+        img.stairs {
+          position: absolute;
+          // position: relative;
+          top: 50px;
+          left: 50px;
+          width: 46%;
+          transform: translateY(var(--stairs));
+          will-change: transform;
+        }
+        p {
+          clear: both;
+        }
+      }
+      .heatGall {
+        position: relative;
+        .heatCopy {
+          position: absolute;
+          top: 80px;
+          right: 80px;
+          width: 450px;
+          font-family: $font-UQReg;
+          font-size: 50px;
+          color: #e66439;
+          h2 {
+            margin: 0;
+            padding-bottom: 5px;
+            color: #e66439;
+          }
+          p {
+            margin-bottom: 20px;
+          }
+          .heatCta {
+            position: relative;
+            top: 0;
+            right: auto;
+            left: 0;
+            margin-top: 20px;
+            .zeroCTA {
+              color: #2a5061;
+              border-color: #2a5061;
+              background: transparent;
+              &:hover {
+                color: white;
+                background: #2a5061;
+              }
+            }
+          }
         }
       }
     }
