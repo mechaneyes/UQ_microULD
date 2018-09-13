@@ -1,6 +1,3 @@
-
-
-
 $(window).scroll(function () {
 
   // selectors
@@ -89,32 +86,6 @@ $(window).scroll(function () {
     // console.log('top_of_screen: ' + top_of_screen);
     $('.paraBack02 p').addClass('fadeIn');
     $('.paraBack02 p').removeClass('fadeOut');
-  }
-
-
-
-
-
-  // Method Air video
-  // 
-  $('.gimbalGod').trigger('pause');
-
-  var top_of_gimbal = $('.gimbalGod').offset().top;
-  var bottom_of_gimbal = $('.gimbalGod').offset().top + $('.gimbalGod').outerHeight();
-
-  if ((bottom_of_screen > top_of_gimbal) && (top_of_screen < bottom_of_gimbal)) {
-
-    // console.log('visible');
-    $('.gimbalGod').trigger('play');
-
-  } else {
-
-    // console.log('NOT visible');
-    $('.gimbalGod').trigger('pause');
-  }
-
-  if (top_of_screen > bottom_of_gimbal) {
-    // console.log('top_of_screen: ' + top_of_screen);
   }
 
 }).scroll();
