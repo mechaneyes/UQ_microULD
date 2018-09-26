@@ -1,3 +1,9 @@
+
+
+
+
+
+
 $(window).scroll(function () {
 
   // selectors
@@ -104,7 +110,7 @@ const repellent = basicScroll.create({
   props: {
     '--rep': {
       from: '400px',
-      to: '-300px'
+      to: '-370px'
     }
   }
 })
@@ -134,7 +140,7 @@ const heatRetention = basicScroll.create({
   props: {
     '--heat': {
       from: '400px',
-      to: '-300px'
+      to: '-430px'
     }
   }
 })
@@ -160,11 +166,11 @@ const lightweight = basicScroll.create({
 const recap = basicScroll.create({
   elem: document.querySelector('.recapMainImage'),
   from: 'top-bottom',
-  to: 'top-top',
+  to: 'bottom-top',
   props: {
     '--recap': {
-      from: '360px',
-      to: '-120px'
+      from: '400px',
+      to: '-450px'
     }
   }
 })
@@ -238,7 +244,7 @@ const method = basicScroll.create({
 
 
 const stairs = basicScroll.create({
-  elem: document.querySelector('.stairs'),
+  elem: document.querySelector('img.stairs'),
   from: 'top-bottom',
   to: 'top-top',
   props: {

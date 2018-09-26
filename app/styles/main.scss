@@ -655,7 +655,9 @@ video {
 
 
 
-
+.slick-list {
+  top: -13px;
+}
 
 
 
@@ -758,4 +760,32 @@ h1, h2 {
   font-size: 3em;
   letter-spacing: -0.05em;
   line-height: 1.1;
+}
+
+
+
+
+
+
+
+
+// ————————————————————————————————————o————————————————————————————————————o OVERRIDES -->
+// DEMANDWARE OVERRIDES -->
+// ————————————————————————————————————o————————————————————————————————————o OVERRIDES -->
+.header-wrapper .promo-container,
+.header-wrapper .header-border,
+.header-wrapper .top-banner,
+.header-wrapper .header-banner,
+.siginup-logo,
+#footer,
+#globalsignup-dialog,
+.back-to-top.show-back-top,
+.back-to-top.bottom-tuch {
+    display: none !important;
+}
+body {
+    margin: 0;
+}
+video {
+    z-index: auto;
 }
