@@ -41,8 +41,8 @@ $(window).scroll(function () {
   // Check to see if second panel (after intro) is visible
   // If that panel is visible, fade out the video
   // 
-  var top_of_element = $('.repellent').offset().top + 300;
-  var bottom_of_element = $('.repellent').offset().top + $('.repellent').outerHeight() - 300;
+  var top_of_element = $('.whatIs').offset().top + 300;
+  var bottom_of_element = $('.whatIs').offset().top + $('.whatIs').outerHeight() - 300;
   var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
   var top_of_screen = $(window).scrollTop();
 
@@ -71,34 +71,67 @@ $(window).scroll(function () {
 
 
 
-  // Static, Scroll-Over Background Images
-  // 
-  var top_of_bg = $('.paraBack02').offset().top + 100;
-  var bottom_of_bg = $('.paraBack02').offset().top + $('.paraBack02').outerHeight() - 50;
+  // // Static, Scroll-Over Background Images
+  // // 
+  // var top_of_bg = $('.paraBack02').offset().top + 100;
+  // var bottom_of_bg = $('.paraBack02').offset().top + $('.paraBack02').outerHeight() - 50;
 
-  // console.log('top_of_element: ' + top_of_element)
+  // // console.log('top_of_element: ' + top_of_element)
 
-  if ((bottom_of_screen > top_of_bg) && (top_of_screen < bottom_of_bg)) {
-    // console.log('visible');
-    $('.paraBack02 p').addClass('fadeIn');
-    $('.paraBack02 p').removeClass('fadeOut');
-  } else {
-    // console.log('NOT visible');
-    $('.paraBack02 p').removeClass('fadeIn');
-    $('.paraBack02 p').addClass('fadeOut');
-  }
+  // if ((bottom_of_screen > top_of_bg) && (top_of_screen < bottom_of_bg)) {
+  //   // console.log('visible');
+  //   $('.paraBack02 p').addClass('fadeIn');
+  //   $('.paraBack02 p').removeClass('fadeOut');
+  // } else {
+  //   // console.log('NOT visible');
+  //   $('.paraBack02 p').removeClass('fadeIn');
+  //   $('.paraBack02 p').addClass('fadeOut');
+  // }
 
-  if (top_of_screen > bottom_of_bg) {
-    // console.log('top_of_screen: ' + top_of_screen);
-    $('.paraBack02 p').addClass('fadeIn');
-    $('.paraBack02 p').removeClass('fadeOut');
-  }
+  // if (top_of_screen > bottom_of_bg) {
+  //   // console.log('top_of_screen: ' + top_of_screen);
+  //   $('.paraBack02 p').addClass('fadeIn');
+  //   $('.paraBack02 p').removeClass('fadeOut');
+  // }
 
 }).scroll();
 
 
 
 
+
+
+
+
+const whatIs = basicScroll.create({
+  elem: document.querySelector('.whatIsImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--whatIs': {
+      from: '400px',
+      to: '-380px'
+    }
+  }
+})
+// lightweight.start()
+
+
+
+
+
+const anchors = basicScroll.create({
+  elem: document.querySelector('.anchors'),
+  from: 'top-bottom',
+  to: 'middle-middle',
+  props: {
+    '--anchors': {
+      from: '300px',
+      to: '0px'
+    }
+  }
+})
+// lightweight.start()
 
 
 
@@ -110,7 +143,7 @@ const repellent = basicScroll.create({
   props: {
     '--rep': {
       from: '400px',
-      to: '-370px'
+      to: '-450px'
     }
   }
 })
@@ -118,17 +151,17 @@ const repellent = basicScroll.create({
 
 
 
-const fieldTesting = basicScroll.create({
-  elem: document.querySelector('.paraJacket'),
-  from: 'top-bottom',
-  to: 'bottom-top',
-  props: {
-    '--field': {
-      from: '400px',
-      to: '-370px'
-    }
-  }
-})
+// const fieldTesting = basicScroll.create({
+//   elem: document.querySelector('.paraJacket'),
+//   from: 'top-bottom',
+//   to: 'bottom-top',
+//   props: {
+//     '--field': {
+//       from: '400px',
+//       to: '-370px'
+//     }
+//   }
+// })
 // fieldTesting.start()
 
 
