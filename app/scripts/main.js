@@ -6,7 +6,14 @@
 
 $(window).scroll(function () {
 
-  // selectors
+  
+  
+
+
+
+  // <!-- ————————————————————————————————————o————————————————————————————————————o COLOR CHANGE -->
+  // <!-- COLOR CHANGE ON SCROLL -->
+  // <!-- ————————————————————————————————————o————————————————————————————————————o COLOR CHANGE -->
   var $window = $(window),
     $body = $('body'),
     // $body = $('#coloursScrl'),
@@ -32,6 +39,9 @@ $(window).scroll(function () {
       $body.addClass('color-' + $(this).data('color'));
     }
   });
+
+
+
 
 
 
@@ -136,35 +146,23 @@ const anchors = basicScroll.create({
 
 
 
-const repellent = basicScroll.create({
-  elem: document.querySelector('.repImage'),
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o FEATURES GENERAL -->
+// <!-- FEATURES GENERAL -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o FEATURES GENERAL -->
+const lightweight = basicScroll.create({
+  elem: document.querySelector('.lightImage'),
   from: 'top-bottom',
   to: 'bottom-top',
   props: {
-    '--rep': {
+    '--light': {
       from: '400px',
-      to: '-450px'
+      to: '-380px'
     }
   }
 })
-// repellent.start()
-
-
-
-// const fieldTesting = basicScroll.create({
-//   elem: document.querySelector('.paraJacket'),
-//   from: 'top-bottom',
-//   to: 'bottom-top',
-//   props: {
-//     '--field': {
-//       from: '400px',
-//       to: '-370px'
-//     }
-//   }
-// })
-// fieldTesting.start()
-
-
 
 const heatRetention = basicScroll.create({
   elem: document.querySelector('.heatImage'),
@@ -177,41 +175,79 @@ const heatRetention = basicScroll.create({
     }
   }
 })
-// heatRetention.start()
 
-
-
-const lightweight = basicScroll.create({
-  elem: document.querySelector('.lightImage'),
+const repellent = basicScroll.create({
+  elem: document.querySelector('.repImage'),
   from: 'top-bottom',
   to: 'bottom-top',
   props: {
-    '--light': {
-      from: '400px',
-      to: '-380px'
-    }
-  }
-})
-// lightweight.start()
-
-
-
-const recap = basicScroll.create({
-  elem: document.querySelector('.recapMainImage'),
-  from: 'top-bottom',
-  to: 'bottom-top',
-  props: {
-    '--recap': {
+    '--rep': {
       from: '400px',
       to: '-450px'
     }
   }
 })
-// recap.start()
 
 
 
 
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
+// <!-- COLLECTIONS -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
+const collecSeamless = basicScroll.create({
+  elem: document.querySelector('.seamelessImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--seamless': {
+      from: '400px',
+      to: '-300px'
+    }
+  }
+})
+
+const collecCompact = basicScroll.create({
+  elem: document.querySelector('.compactImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--compact': {
+      from: '400px',
+      to: '-400px'
+    }
+  }
+})
+
+const collecClassic = basicScroll.create({
+  elem: document.querySelector('.classicImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--classic': {
+      from: '300px',
+      to: '-400px'
+    }
+  }
+})
+
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY SEAMLESS -->
+// <!-- GALLERY SEAMLESS -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY SEAMLESS -->
 const rainy = basicScroll.create({
   elem: document.querySelector('.rainy'),
   from: 'top-bottom',
@@ -223,71 +259,54 @@ const rainy = basicScroll.create({
     }
   }
 })
-// rainy.start()
-
-
-
-
-const iceCave = basicScroll.create({
-  elem: document.querySelector('.chinatown'),
-  from: 'top-bottom',
-  to: 'middle-middle',
-  props: {
-    '--chinatown': {
-      from: '160px',
-      to: '0px'
-    }
-  }
-})
-// iceCave.start()
-
-
-
-
-const sohoStreet = basicScroll.create({
-  elem: document.querySelector('.sohoStreet'),
-  from: 'top-bottom',
-  to: 'middle-middle',
-  props: {
-    '--sohoStreet': {
-      from: '160px',
-      to: '0px'
-    }
-  }
-})
-// iceCave.start()
-
-
-
-
-const method = basicScroll.create({
-  elem: document.querySelector('.gimbalGod'),
-  from: 'top-bottom',
-  to: 'top-top',
-  props: {
-    '--method': {
-      from: '450px',
-      to: '-30px'
-    }
-  }
-})
-// method.start()
-
-
-
 
 const stairs = basicScroll.create({
   elem: document.querySelector('img.stairs'),
   from: 'top-bottom',
-  to: 'top-top',
+  to: 'middle-top',
   props: {
     '--stairs': {
-      from: '450px',
-      to: '-80px'
+      from: '250px',
+      to: '-150px'
     }
   }
 })
-// method.start()
+
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY COMPACT -->
+// <!-- GALLERY COMPACT -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY COMPACT -->
+const violin = basicScroll.create({
+  elem: document.querySelector('img.violin'),
+  from: 'top-bottom',
+  to: 'middle-middle',
+  props: {
+    '--violin': {
+      from: '160px',
+      to: '0px'
+    }
+  }
+})
+
+const morphosis = basicScroll.create({
+  elem: document.querySelector('img.morphosis'),
+  from: 'top-bottom',
+  to: 'middle-middle',
+  props: {
+    '--morphosis': {
+      from: '160px',
+      to: '0px'
+    }
+  }
+})
 
 
 

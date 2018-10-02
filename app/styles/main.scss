@@ -29,7 +29,11 @@ Helvetica,
 Arial,
 "Lucida Grande",
 sans-serif;
-/* Setting fade transition and default settings */
+
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     color: #000;
@@ -37,6 +41,7 @@ body {
     transition: background-color 1s ease; // margin: 24px;
 }
 
+/* Setting fade transition and default settings */
 #main {
     transition: background-color 1s ease;
 }
@@ -56,6 +61,12 @@ body {
     transition: background-color 1s ease;
     * {
         box-sizing: border-box;
+    }
+    a {
+        color: white;
+    }
+    a:hover {
+        color: lightgray;
     }
     img {
         max-width: none;
@@ -286,7 +297,7 @@ body {
             grid-column-gap: 20px;
             img.mainImage {
                 justify-self: end;
-                width: 120%;
+                width: 110%;
                 transform: translateY(var(--heat));
                 will-change: transform;
             }
@@ -295,26 +306,31 @@ body {
                 margin-top: 20px;
             }
         }
-        &.uld {
-            .mainImage {
-                // padding-right: 20px;
-            }
-        }
-        &.recap {
+
+
+
+
+
+
+
+        // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
+		// <!-- COLLECTION SECTIONS -->
+        // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
+        &.collection {
             grid-template-columns: 1fr 41%;
             grid-column-gap: 60px;
-            margin-bottom: 500px;
+            margin-bottom: 200px;
             .info {
-                .recapCol {
+                .collecCol {
                     padding: 20px 20px 0 0;
                     &:last-child {
                         margin-left: 30px;
                     }
                 }
-                .recapCol+.theCtas {
+                .collecCol+.theCtas {
                     top: 0;
                 }
-                .recapItem {
+                .collecItem {
                     display: block;
                     clear: both;
                     img {
@@ -327,19 +343,62 @@ body {
                         word-wrap: break-word;
                     }
                 }
-            }
-            img.mainImage {
-                width: 113%;
-                margin-left: -60px;
-                transform: translateY(var(--recap));
-                will-change: transform;
-            }
-            .recapCol {
+			}
+            .collecCol {
                 float: left;
                 display: block;
                 width: 50%;
-            }
+			}
+			&.collecSeamless {
+				.seamelessImage {
+					width: 113%;
+					margin-left: -60px;
+					transform: translateY(var(--seamless));
+					will-change: transform;
+				}
+			}
+			&.collecCompact {
+				grid-template-columns: 43% 1fr;
+				.compactImage {
+					transform: translateY(var(--compact));
+					will-change: transform;
+				}
+				.collecFeats {
+					overflow: hidden;
+					width: 100%;
+					margin-top: 20px;
+					.collecItem {
+						clear: none;
+						float: left;
+						width: 48%;
+						// border: 1px solid blue;
+					}
+				}
+			}
+			&.collecClassic {
+                grid-template-columns: 1fr 51%;
+				.classicImage {
+					width: 100%;
+					// margin-left: -60px;
+					transform: translateY(var(--classic));
+					will-change: transform;
+				}
+			}
         }
+
+
+
+
+
+
+
+
+
+
+
+        // <!-- ————————————————————————————————————o————————————————————————————————————o STATIC BG SCROLL -->
+		// <!-- STATIC BG SCROLL -->
+        // <!-- ————————————————————————————————————o————————————————————————————————————o STATIC BG SCROLL -->
         &.paraBack {
             grid-template-columns: 1fr;
             grid-template-rows: calc(100vh - 200px);
@@ -406,15 +465,24 @@ body {
                 will-change: transform;
             }
         }
+
+
+
+
+
+        // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERIES -->
+		// <!-- GALLERIES -->
+        // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERIES -->
         &.gallery {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
-            margin-top: 170px;
+			margin-top: 170px;
+			margin-bottom: 500px;
             img {
                 width: 100%;
             }
             .gallRow {
-                margin-top: 80px;
+                margin-top: 0;
                 p {
                     margin-bottom: 40px;
                 }
@@ -431,7 +499,8 @@ body {
                 grid-template-rows: 1fr;
                 grid-column-gap: 20px;
                 justify-content: center;
-                align-items: center; // margin-right: 75px;
+				align-items: center;
+				margin-bottom: 200px;
                 img.rainy {
                     justify-self: end;
                     width: 86%;
@@ -545,7 +614,59 @@ body {
                         }
                     }
                 }
-            }
+			}
+			&.gallCompact {
+				.gall01 {
+					grid-template-columns: 1fr 66%;
+					margin-bottom: 120px;
+				}
+				.gall02 {
+					display: grid;
+					grid-template-columns: 66% 1fr;
+					grid-column-gap: 20px;
+					img {
+						float: none;
+						width: 100%;
+					}
+					.imgSecondary {
+						margin-top: 15%;
+					}
+                }
+                .violin {
+                    transform: translateY(var(--violin));
+                    will-change: transform;
+                }
+                .morphosis {
+                    transform: translateY(var(--morphosis));
+                    will-change: transform;
+                }
+			}
+			&.gallClassic {
+				.gall01 {
+					grid-template-columns: 1fr 66%;
+					margin-bottom: 120px;
+				}
+				.gall02 {
+					display: grid;
+					grid-template-columns: 66% 1fr;
+					grid-column-gap: 20px;
+					img {
+						float: none;
+						width: 100%;
+					}
+					.imgSecondary {
+						margin-top: 22%;
+					}
+                }
+                .violin {
+                    transform: translateY(var(--violin));
+                    will-change: transform;
+                }
+                .morphosis {
+                    transform: translateY(var(--morphosis));
+                    will-change: transform;
+                }
+			}
         }
     } // Fixed backgrounds - setting the element rel to position text
     .production {
@@ -577,7 +698,7 @@ body {
     width: auto;
     min-width: 150px; // padding: 9px 5px 6px;
     padding-top: 4px;
-    margin: 0 auto;
+    margin: 0 15px 0 auto;
     font-family: $font-dinBold;
     font-size: 1.1vw;
     color: black;
