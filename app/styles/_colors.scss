@@ -2,6 +2,81 @@
 // COLORS COLOURS -->
 // ————————————————————————————————————o————————————————————————————————————o COLORS -->
 
+
+
+
+
+// ————————————————————————————————————o HEALTH -->
+// HEALTH -->
+.color-healthOrange {
+  background-color: #F98B29;
+}
+.color-healthOrangeLight {
+  background-color: #FF9B43;
+}
+.color-healthOrangeDark {
+  background-color: #AC580E;
+}
+.color-healthBlue {
+  background-color: #00BBE5;
+}
+.color-healthBlueLight {
+  background-color: #29D3F9;
+}
+.color-healthBlueDark {
+  background-color: #008eaf;
+}
+
+
+
+
+
+
+
+
+// ————————————————————————————————————o MONOCHROMATIC BLUE -->
+// MONOCHROMATIC BLUE -->
+.color-monBlue01 {
+  background-color: #31a0e4;
+}
+.color-monBlue02 {
+  background-color: #008DE5;
+}
+.color-monBlue03 {
+  background-color: #006EB2;
+}
+.color-monBlue04 {
+  background-color: #0971B2;
+}
+.color-monBlue05 {
+  background-color: #00558a;
+}
+
+
+
+
+
+
+
+
+// ————————————————————————————————————o MONOCHROMATIC ORANGE -->
+// MONOCHROMATIC ORANGE -->
+.color-monOrange01 {
+  background-color: #FF9F19;
+}
+.color-monOrange02 {
+  background-color: #FF9508;
+  background-color: #DE8816;
+}
+
+
+
+
+
+
+
+
+
 .color-heat {
   background-color: #f3913b;
 }
@@ -41,66 +116,6 @@
 }
 
 
-
-// ————————————————————————————————————o HEALTH -->
-// HEALTH -->
-.color-healthOrange {
-  background-color: #F98B29;
-}
-.color-healthOrangeLight {
-  background-color: #FF9B43;
-}
-.color-healthOrangeDark {
-  background-color: #AC580E;
-}
-.color-healthBlue {
-  background-color: #00BBE5;
-}
-.color-healthBlueLight {
-  background-color: #29D3F9;
-}
-.color-healthBlueDark {
-  background-color: #008eaf;
-}
-
-
-
-
-// ————————————————————————————————————o MONOCHROMATIC BLUE -->
-// MONOCHROMATIC BLUE -->
-.color-monBlue01 {
-  background-color: #31a0e4;
-}
-.color-monBlue02 {
-  background-color: #008DE5;
-}
-.color-monBlue03 {
-  background-color: #006EB2;
-}
-.color-monBlue04 {
-  background-color: #0971B2;
-}
-.color-monBlue05 {
-  background-color: #00558a;
-}
-
-
-
-
-// ————————————————————————————————————o MONOCHROMATIC ORANGE -->
-// MONOCHROMATIC ORANGE -->
-.color-monOrange01 {
-  background-color: #FF9F19;
-}
-.color-monOrange02 {
-  background-color: #FF9508;
-  background-color: #DE8816;
-}
-
-
-
-
-
 .color-violet {
   background-color: #7A4EAB;
 }
@@ -134,16 +149,4 @@
 }
 .color-black {
   background-color: black;
-}
-
-/* styling for demo, can ignore */
-body {
-  text-align: left;
-  font-size: 120%;
-  line-height: 1.618;
-}
-h1, h2 {
-  font-size: 3em;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
 }

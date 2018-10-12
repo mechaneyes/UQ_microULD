@@ -81,29 +81,6 @@ $(window).scroll(function () {
 
 
 
-  // // Static, Scroll-Over Background Images
-  // // 
-  // var top_of_bg = $('.paraBack02').offset().top + 100;
-  // var bottom_of_bg = $('.paraBack02').offset().top + $('.paraBack02').outerHeight() - 50;
-
-  // // console.log('top_of_element: ' + top_of_element)
-
-  // if ((bottom_of_screen > top_of_bg) && (top_of_screen < bottom_of_bg)) {
-  //   // console.log('visible');
-  //   $('.paraBack02 p').addClass('fadeIn');
-  //   $('.paraBack02 p').removeClass('fadeOut');
-  // } else {
-  //   // console.log('NOT visible');
-  //   $('.paraBack02 p').removeClass('fadeIn');
-  //   $('.paraBack02 p').addClass('fadeOut');
-  // }
-
-  // if (top_of_screen > bottom_of_bg) {
-  //   // console.log('top_of_screen: ' + top_of_screen);
-  //   $('.paraBack02 p').addClass('fadeIn');
-  //   $('.paraBack02 p').removeClass('fadeOut');
-  // }
-
 }).scroll();
 
 
@@ -141,7 +118,6 @@ const anchors = basicScroll.create({
     }
   }
 })
-// lightweight.start()
 
 
 
@@ -219,7 +195,7 @@ const collecCompact = basicScroll.create({
   props: {
     '--compact': {
       from: '400px',
-      to: '-400px'
+      to: '-460px'
     }
   }
 })
@@ -287,7 +263,7 @@ const stairs = basicScroll.create({
 const violin = basicScroll.create({
   elem: document.querySelector('img.violin'),
   from: 'top-bottom',
-  to: 'middle-middle',
+  to: 'top-top',
   props: {
     '--violin': {
       from: '160px',
@@ -296,20 +272,28 @@ const violin = basicScroll.create({
   }
 })
 
-const morphosis = basicScroll.create({
-  elem: document.querySelector('img.morphosis'),
+// const morphosis = basicScroll.create({
+//   elem: document.querySelector('img.morphosis'),
+//   from: 'top-bottom',
+//   to: 'middle-middle',
+//   props: {
+//     '--morphosis': {
+//       from: '160px',
+//       to: '0px'
+//     }
+//   }
+// })
+
+const gotham = basicScroll.create({
+  elem: document.querySelector('.gotham'),
   from: 'top-bottom',
-  to: 'middle-middle',
+  to: 'middle-top',
   props: {
-    '--morphosis': {
+    '--gotham': {
       from: '160px',
-      to: '0px'
+      to: '-50px'
     }
   }
 })
-
-
-
-
 
 

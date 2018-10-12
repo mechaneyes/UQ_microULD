@@ -1,54 +1,41 @@
 @import url('//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css');
 @import url('//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css');
 @import 'colors';
-$font-UQReg: "UniqloRegularRegular",
-UniqloRegularRegular,
-"UniqloRegular",
-UniqloRegular,
-"Helvetica Neue",
-Helvetica,
-Arial,
-sans-serif;
-$font-UQBold: 'UniqloBoldRegular',
-UniqloBoldRegular,
-arial;
-$font-dinLight: "DIN Next W01 Light",
-HelveticaNeue-Light,
-"Helvetica Neue Light",
-"Helvetica Neue",
-Helvetica,
-Arial,
-"Lucida Grande",
-sans-serif;
-$font-dinReg: "DIN Next W01 Regular",
-arial;
-$font-dinBold: "DIN Next W01 Bold",
-arial;
-$font-hellNeu: "Helvetica Neue",
-Helvetica,
-Arial,
-"Lucida Grande",
-sans-serif;
+
+
+$font-UQReg: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-UQBold: UniqloProBold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-helNeue: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 
 html {
     scroll-behavior: smooth;
 }
 
+
+
+// ————————————————————————————————————o————————————————————————————————————o COLOR FADES -->
+// Setting fade transition and default settings -->
+// ————————————————————————————————————o————————————————————————————————————o COLOR FADES -->
 body {
-    color: #000;
-    background-color: #f4f4f4;
     transition: background-color 1s ease; // margin: 24px;
 }
 
-/* Setting fade transition and default settings */
 #main {
     transition: background-color 1s ease;
 }
 
+
+
+
+
 .back-to-top.show-back-top {
     display: none;
 }
+
+
+
+
 
 // .pt_primary #main .primary-content #coloursScrl,
 #coloursScrl {
@@ -56,8 +43,8 @@ body {
     margin: 0 auto;
     perspective: 1px;
     transform-style: preserve-3d;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    // overflow-x: hidden;
+    // overflow-y: scroll;
     transition: background-color 1s ease;
     * {
         box-sizing: border-box;
@@ -93,7 +80,7 @@ body {
     }
     p {
         margin: 0;
-        font-family: $font-dinLight;
+        font-family: $font-helNeue;
         font-size: 21px;
         font-weight: 300;
         line-height: 1.3;
@@ -111,9 +98,10 @@ body {
         align-items: center;
         min-height: 100vh;
         margin: 100px 0;
-        font-family: $font-hellNeu;
+        font-family: $font-helNeue;
         font-weight: 300;
         color: white;
+        letter-spacing: 0.6px;
         display: grid;
         grid-template-columns: 45% 1fr;
         grid-column-gap: 20px;
@@ -169,7 +157,13 @@ body {
         .flipped {
             transform: scaleX(-1);
             filter: FlipH;
-        } // ————————————————————————————————————o————————————————————————————————————o SECTIONS -->
+        }
+        
+        
+        
+        
+        
+        // ————————————————————————————————————o————————————————————————————————————o SECTIONS -->
         // SPECIFIC SECTIONS -->
         // ————————————————————————————————————o————————————————————————————————————o SECTIONS -->
         &.largerImage {
@@ -231,6 +225,11 @@ body {
                     }
                 }
             }
+            .uldLineup {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 30px;
+            }
         }
         &.repellent {
             grid-template-columns: 1fr 52%;
@@ -251,7 +250,7 @@ body {
                 }
             }
         }
-        &.fieldTesting {
+        &.family {
             grid-template-columns: 45% 1fr;
             .oneInfo {
                 color: #ff9349;
@@ -513,49 +512,49 @@ body {
                 float: right;
                 width: 80%;
             }
-            .gall03 {
-                display: grid;
-                grid-template-columns: 80% 1fr;
-                grid-template-rows: 1fr;
-                justify-content: center;
-                align-items: center;
-                img {
-                    transform: translateY(var(--chinatown));
-                    will-change: transform;
-                }
-            }
-            .gall03b {
-                img.iceCave {
-                    float: right;
-                    width: 100%;
-                    width: 80%;
-                }
-            }
-            .gall03c {
-                img {
-                    float: left;
-                    width: 100%;
-                    width: 80%;
-                    transform: translateY(var(--theCave));
-                    will-change: transform;
-                }
-            }
-            .gall04 {
-                position: relative;
-                height: 620px; // margin-bottom: 200px;
-                overflow: hidden;
-                video {
-                    // opacity: 0;
-                    position: relative;
-                    top: 150px;
-                    left: 0;
-                    width: 100%;
-                    height: 100%; // object-fit: cover;
-                    z-index: -1;
-                    transform: translateY(var(--method));
-                    will-change: transform;
-                }
-            }
+            // .gall03 {
+            //     display: grid;
+            //     grid-template-columns: 80% 1fr;
+            //     grid-template-rows: 1fr;
+            //     justify-content: center;
+            //     align-items: center;
+            //     img {
+            //         transform: translateY(var(--chinatown));
+            //         will-change: transform;
+            //     }
+            // }
+            // .gall03b {
+            //     img.iceCave {
+            //         float: right;
+            //         width: 100%;
+            //         width: 80%;
+            //     }
+            // }
+            // .gall03c {
+            //     img {
+            //         float: left;
+            //         width: 100%;
+            //         width: 80%;
+            //         transform: translateY(var(--theCave));
+            //         will-change: transform;
+            //     }
+            // }
+            // .gall04 {
+            //     position: relative;
+            //     height: 620px; // margin-bottom: 200px;
+            //     overflow: hidden;
+            //     video {
+            //         // opacity: 0;
+            //         position: relative;
+            //         top: 150px;
+            //         left: 0;
+            //         width: 100%;
+            //         height: 100%; // object-fit: cover;
+            //         z-index: -1;
+            //         transform: translateY(var(--method));
+            //         will-change: transform;
+            //     }
+            // }
             .gall05 {
                 position: relative; // margin-bottom: 300px;
                 display: grid;
@@ -592,10 +591,13 @@ body {
                     h2 {
                         margin: 0;
                         padding-bottom: 5px;
+                        font-size: 50px;
                         color: #e66439;
+                        color: #2a5061;
                     }
                     p {
                         margin-bottom: 20px;
+                        color: #2a5061;
                     }
                     .heatCta {
                         position: relative;
@@ -618,8 +620,8 @@ body {
 			&.gallCompact {
 				.gall01 {
 					grid-template-columns: 1fr 66%;
-					margin-bottom: 120px;
-				}
+					margin-bottom: 30px;
+                }
 				.gall02 {
 					display: grid;
 					grid-template-columns: 66% 1fr;
@@ -630,9 +632,16 @@ body {
 					}
 					.imgSecondary {
 						margin-top: 15%;
-					}
+                    }
+                    .librarian {
+                        // padding-top: 60px;
+                    }
+                    video.gotham {
+                        width: 100%;
+                    }
                 }
                 .violin {
+                    width: 140%;
                     transform: translateY(var(--violin));
                     will-change: transform;
                 }
@@ -640,12 +649,19 @@ body {
                     transform: translateY(var(--morphosis));
                     will-change: transform;
                 }
+                .gotham {
+                    transform: translateY(var(--gotham));
+                    will-change: transform;
+                }
 			}
 			&.gallClassic {
 				.gall01 {
 					grid-template-columns: 1fr 66%;
-					margin-bottom: 120px;
-				}
+					margin-bottom: 70px;
+                }
+                .adam {
+                    padding-top: 220px;
+                }
 				.gall02 {
 					display: grid;
 					grid-template-columns: 66% 1fr;
@@ -699,7 +715,7 @@ body {
     min-width: 150px; // padding: 9px 5px 6px;
     padding-top: 4px;
     margin: 0 15px 0 auto;
-    font-family: $font-dinBold;
+    font-family: $font-UQReg;
     font-size: 1.1vw;
     color: black;
     text-transform: uppercase;
@@ -720,7 +736,7 @@ body {
     }
 }
 
-video {
+.uldVideo {
     // opacity: 0;
     position: fixed;
     top: 0;
@@ -780,6 +796,6 @@ body {
     margin: 0;
 }
 
-video {
+.uldVideo {
     z-index: auto;
 }
