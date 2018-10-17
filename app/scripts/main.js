@@ -272,18 +272,6 @@ const violin = basicScroll.create({
   }
 })
 
-// const morphosis = basicScroll.create({
-//   elem: document.querySelector('img.morphosis'),
-//   from: 'top-bottom',
-//   to: 'middle-middle',
-//   props: {
-//     '--morphosis': {
-//       from: '160px',
-//       to: '0px'
-//     }
-//   }
-// })
-
 const gotham = basicScroll.create({
   elem: document.querySelector('.gotham'),
   from: 'top-bottom',
@@ -292,6 +280,42 @@ const gotham = basicScroll.create({
     '--gotham': {
       from: '160px',
       to: '-50px'
+    }
+  }
+})
+
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY CLASSIC -->
+// <!-- GALLERY CLASSIC -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY CLASSIC -->
+const oculus = basicScroll.create({
+  elem: document.querySelector('img.oculus'),
+  from: 'top-bottom',
+  to: 'middle-top',
+  props: {
+    '--oculus': {
+      from: '220px',
+      to: '0px'
+    }
+  }
+})
+
+const chinatown = basicScroll.create({
+  elem: document.querySelector('.chinatown'),
+  from: 'top-bottom',
+  to: 'middle-top',
+  props: {
+    '--chinatown': {
+      from: '200px',
+      to: '-150px'
     }
   }
 })
