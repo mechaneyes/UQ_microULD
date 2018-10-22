@@ -110,9 +110,27 @@ const whatIs = basicScroll.create({
 const anchors = basicScroll.create({
   elem: document.querySelector('.anchors'),
   from: 'top-bottom',
-  to: 'middle-middle',
+  to: 'top-top',
   props: {
     '--anchors': {
+      from: '300px',
+      to: '-20px'
+    }
+  }
+})
+
+
+
+
+
+
+
+const colors = basicScroll.create({
+  elem: document.querySelector('.colors'),
+  from: 'top-bottom',
+  to: 'middle-middle',
+  props: {
+    '--colors': {
       from: '300px',
       to: '0px'
     }
@@ -182,8 +200,8 @@ const collecSeamless = basicScroll.create({
   to: 'bottom-top',
   props: {
     '--seamless': {
-      from: '400px',
-      to: '-300px'
+      from: '300px',
+      to: '-400px'
     }
   }
 })
