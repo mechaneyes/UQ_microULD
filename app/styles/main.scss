@@ -200,7 +200,12 @@ body {
             .info {
                 margin-right: 40px;
             }
-            img {
+            img.uldLogo {
+                float: none;
+                width: 200px;
+                margin: 10px 0 20px;
+            }
+            img.whatIsImage {
                 transform: translateY(var(--whatIs));
                 will-change: transform;
             }
@@ -258,6 +263,20 @@ body {
                 margin: 30px auto 0px 0;
                 transform: translateY(var(--colors));
                 will-change: transform;
+            }
+            .colorRotator {
+                width: 80%;
+                max-width: 1000px;
+                .slick-slide {
+                    margin-right: 6px;
+                }
+            }
+            .colorRotBack {
+                width: 80%;
+                max-width: 1000px;
+                .slick-slide {
+                    margin-right: 6px;
+                }
             }
         }
         &.repellent {
