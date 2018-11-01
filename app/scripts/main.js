@@ -114,7 +114,7 @@ const anchors = basicScroll.create({
   props: {
     '--anchors': {
       from: '300px',
-      to: '-20px'
+      to: '0px'
     }
   }
 })
@@ -194,6 +194,18 @@ const repellent = basicScroll.create({
 // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
 // <!-- COLLECTIONS -->
 // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
+const collecClassic = basicScroll.create({
+  elem: document.querySelector('.classicImage'),
+  from: 'top-bottom',
+  to: 'top-top',
+  props: {
+    '--classic': {
+      from: '300px',
+      to: '-160px'
+    }
+  }
+})
+
 const collecSeamless = basicScroll.create({
   elem: document.querySelector('.seamelessImage'),
   from: 'top-bottom',
@@ -209,24 +221,12 @@ const collecSeamless = basicScroll.create({
 const collecCompact = basicScroll.create({
   elem: document.querySelector('.compactImage'),
   from: 'top-bottom',
-  to: 'top-middle',
+  to: 'top-top',
   props: {
     '--compact': {
       from: '400px',
       // to: '-390px'
-      to: '-100px'
-    }
-  }
-})
-
-const collecClassic = basicScroll.create({
-  elem: document.querySelector('.classicImage'),
-  from: 'top-bottom',
-  to: 'top-top',
-  props: {
-    '--classic': {
-      from: '300px',
-      to: '-260px'
+      to: '-200px'
     }
   }
 })

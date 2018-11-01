@@ -42,8 +42,8 @@ body {
 
 
 
-.pt_primary #main .primary-content #coloursScrl {
-// #coloursScrl {
+// .pt_primary #main .primary-content #coloursScrl {
+#coloursScrl {
     max-width: 1222px;
     margin: 0 auto;
     perspective: 1px;
@@ -191,12 +191,17 @@ body {
                 height: 90px;
                 padding: 8px 0 8px 25px;
                 border: 4px solid red;
+                overflow: hidden;
                 .tick {
+                    display: none;
                     font-family: $font-UQReg;
                     font-size: 80px;
                     color: red;
                     text-transform: uppercase;
                     line-height: normal;
+                }
+                .slick-slide .tick {
+                    display: inline-block;
                 }
             }
         }
@@ -269,23 +274,39 @@ body {
                 transform: translateY(var(--colors));
                 will-change: transform;
             }
-            .colorRotator {
-                width: 80%;
-                max-width: 1000px;
-                .slick-slide {
-                    margin-right: 6px;
+            .sectionHeader {
+                position: relative;
+            }
+            .gradient {
+                position: absolute;
+                // border: 1px solid white;
+                z-index: 5;
+                &.gradRight {
+                    right: 0;
+                }
+                &.gradLeft {
+                    left: 0;
+                    transform: scaleX(-1);
                 }
             }
-            .colorRotBack {
-                width: 80%;
-                max-width: 1000px;
-                .slick-slide {
-                    margin-right: 6px;
+            .gradBack {
+                position: absolute;
+                bottom: 0;
+                width: 12%;
+                height: 85%;
+                z-index: 6;
+                &.gradBackRight {
+                    right: 0;
+                    background-image: linear-gradient(to right, rgba(255,0,0,0), #1a234a);
+                }
+                &.gradBackLeft {
+                    left: 0;
+                    background-image: linear-gradient(to left, rgba(255,0,0,0), #1a234a);
                 }
             }
-            .colorRotaFasta {
-                width: 80%;
-                max-width: 1000px;
+            .colorTicker {
+                width: 100%;
+                max-width: 1222px;
                 .slick-slide {
                     margin-right: 6px;
                 }
@@ -473,7 +494,7 @@ body {
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 100%;
+            // background-size: 100%;
             p {
                 bottom: 0;
                 width: 30%;
