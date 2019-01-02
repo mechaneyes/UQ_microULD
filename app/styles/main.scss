@@ -1,5 +1,3 @@
-@import url('//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css');
-@import url('//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css');
 @import 'colors';
 
 
@@ -75,9 +73,8 @@ body {
     h2 {
         font-family: $font-UQReg;
         font-size: 60px;
-        color: red;
         color: white;
-        letter-spacing: 0;
+        letter-spacing: 7px;
         border-bottom: none;
     }
     h3 {
@@ -88,7 +85,7 @@ body {
         font-family: $font-helNeue;
         font-size: 21px;
         font-weight: 300;
-        line-height: 1.3;
+        line-height: 1.7;
     }
     .icon {
         margin-bottom: -2px;
@@ -117,15 +114,17 @@ body {
             position: relative;
             margin-bottom: 50px;
             color: white;
-            text-align: left;
-            img {
-                float: left;
-                width: 105px;
-                margin-right: 20px;
+            text-align: center;
+            img.featureImg {
+                float: none;
+                width: 140px;
+                height: 140px;
+                border: 3px solid white;
+                border-radius: 50%;
             }
             h2 {
-                margin-bottom: 10px;
-                text-transform: none;
+                margin: 40px 0;
+                text-transform: uppercase;
             }
             h3 {
                 margin: 0 0 5px;
@@ -135,7 +134,9 @@ body {
                 line-height: 1;
                 text-transform: uppercase;
             }
+
             .theCtas {
+                display: none;
                 clear: both;
                 position: relative;
                 top: 20px;
@@ -200,7 +201,7 @@ body {
                     text-transform: uppercase;
                     line-height: normal;
                 }
-                .slick-slide .tick {
+                .slick-slide.tick {
                     display: inline-block;
                 }
             }
@@ -367,17 +368,18 @@ body {
             .info {
                 margin-right: 40px;
             }
-            img {
+            img.mainImage {
                 transform: translateY(var(--light));
                 will-change: transform;
             }
         }
         &.heatRetention {
-            grid-template-columns: 1fr 43%;
-            grid-column-gap: 20px;
+            grid-template-columns: 43% 50%;
+            // grid-template-columns: 50% 50%;
+            grid-column-gap: 70px;
             img.mainImage {
                 justify-self: end;
-                width: 110%;
+                width: 100%;
                 transform: translateY(var(--heat));
                 will-change: transform;
             }
@@ -386,7 +388,7 @@ body {
                 margin-top: 20px;
             }
             p {
-                width: 105%;
+                // width: 105%;
             }
         }
 
