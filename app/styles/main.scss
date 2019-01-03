@@ -46,17 +46,9 @@ body {
     margin: 0 auto;
     perspective: 1px;
     transform-style: preserve-3d;
-    // overflow-x: hidden;
-    // overflow-y: scroll;
     transition: background-color 1s ease;
     * {
         box-sizing: border-box;
-    }
-    a {
-        color: white;
-    }
-    a:hover {
-        color: lightgray;
     }
     img {
         max-width: none;
@@ -127,13 +119,6 @@ body {
                 text-transform: uppercase;
             }
         }
-        .rightImage {
-            border: 1px solid red;
-        }
-        .flipped {
-            transform: scaleX(-1);
-            filter: FlipH;
-        }
         
         
         
@@ -142,13 +127,6 @@ body {
         // ————————————————————————————————————o————————————————————————————————————o SECTIONS -->
         // SPECIFIC SECTIONS -->
         // ————————————————————————————————————o————————————————————————————————————o SECTIONS -->
-        &.largerImage {
-            grid-template-columns: 59% 1fr;
-            grid-column-gap: 70px;
-            .info {
-                margin-right: 30px;
-            }
-        }
         &.uldIntro {
             grid-template-columns: 80% 1fr;
             h1 {
@@ -176,6 +154,9 @@ body {
                 }
             }
         }
+
+
+
         &.whatIs {
             grid-column-gap: 20px;
             .info {
@@ -192,14 +173,47 @@ body {
             }
         }
 
+
+
+        &.lightweight {
+            grid-template-columns: 1fr 41%;
+            grid-column-gap: 70px;
+            img.mainImage {
+                transform: translateY(var(--light));
+                will-change: transform;
+            }
+        }
+
+
+
+        &.heatRetention {
+            grid-template-columns: 43% 50%;
+            grid-column-gap: 70px;
+            img.mainImage {
+                justify-self: end;
+                width: 100%;
+                transform: translateY(var(--heat));
+                will-change: transform;
+            }
+        }
+
+
+
+        &.repellent {
+            img.mainImage {
+                transform: translateY(var(--rep));
+                will-change: transform;
+            }
+        }
+
+
+
         &.colors {
             grid-template-columns: 1fr;
             .mainImage {
                 display: block;
                 width: 80%;
                 margin: 30px auto 0px 0;
-                // transform: translateY(var(--colors));
-                // will-change: transform;
             }
             .sectionHeader {
                 position: relative;
@@ -241,27 +255,12 @@ body {
                 }
             }
         }
-        &.repellent {
-            grid-template-columns: 1fr 52%;
-            grid-column-gap: 40px;
-            .mainImage {
-                transform: translateY(var(--rep));
-                will-change: transform;
-            }
-            .oneInfo {
-                img {
-                    float: right; // width: 80%;
-                    width: auto;
-                    height: 200px;
-                    margin: 30px 0 0 20px;
-                }
-                .theCtas .zeroCTA {
-                    float: right;
-                }
-            }
-        }
+
+
+
         &.family {
             grid-template-columns: 45% 1fr;
+            grid-column-gap: 70px;
             .oneInfo {
                 color: #ff9349;
                 color: white;
@@ -290,129 +289,183 @@ body {
                 }
             }
         }
-        &.lightweight {
-            grid-template-columns: 1fr 41%;
-            grid-column-gap: 70px;
-            .info {
-                margin-right: 40px;
-            }
-            img.mainImage {
-                transform: translateY(var(--light));
-                will-change: transform;
-            }
+    } // Fixed backgrounds - setting the element rel to position text
+    .production {
+        position: relative;
+    }
+
+
+
+
+
+
+
+
+    // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
+    // <!-- COLLECTION SECTIONS -->
+    // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
+    .collection {
+        margin: 0 80px 300px;
+        color: white;
+        text-align: center;
+        &.panel {
+            display: block;
         }
-        &.heatRetention {
-            grid-template-columns: 43% 50%;
-            // grid-template-columns: 50% 50%;
-            grid-column-gap: 70px;
-            img.mainImage {
-                justify-self: end;
-                width: 100%;
-                transform: translateY(var(--heat));
-                will-change: transform;
+        .subhead {
+            width: 70%;
+            margin: 0 auto;
+        }
+        .collectionMain {
+            display: grid;
+            grid-template-columns: auto 65% auto;
+            grid-column-gap: 60px;
+            margin-top: 50px;
+        }
+        .collecFeats {
+            width: 100%;
+        }
+        .mainImage {
+            width: 100%;
+        }
+        .collecFeats {
+            margin-top: 90px;
+        }
+        .collecItem {
+            margin-bottom: 10px;
+            img {
+                width: 90%;
+                margin: 0;
+                border-radius: 50%;
+                border: 3px solid white;
             }
             img.thumb {
-                width: 50%;
-                margin-top: 20px;
+                width: 120px;
             }
             p {
-                // width: 105%;
+                padding: 10px 0;
+                font-size: 18px;
+                word-wrap: break-word;
             }
         }
-
-
-
-
-
-
-
-        // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
-		// <!-- COLLECTION SECTIONS -->
-        // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // <!-- ————————————————————————————————————o————————————————————————————————————o STATIC BG SCROLL -->
-		// <!-- STATIC BG SCROLL -->
-        // <!-- ————————————————————————————————————o————————————————————————————————————o STATIC BG SCROLL -->
-        &.paraBack {
-            grid-template-columns: 1fr;
-            grid-template-rows: calc(100vh - 200px);
-            margin: 200px auto;
-            margin: 3px auto;
-            align-items: end;
-            height: calc(100vh - 200px);
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            // background-size: 100%;
-            p {
-                bottom: 0;
-                width: 30%;
-                margin-left: 30px;
-                font-size: 26px;
-            }
-        }
-        &.paraBack00 {
-            background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackThreads?$jpgMQ$');
-        }
-        &.paraBack01 {
-            background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackLoom01?$jpgMQ$');
-        }
-        &.paraBack02 {
-            background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackLoom02?$jpgMQ$');
-        }
-        &.paraBack03 {
-            background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackPremiumDown?$jpgMQ$');
-        }
-        &.paraBack04 {
-            background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackTweezers?$jpgMQ$');
-        }
-        &.paraBack05 {
-            background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackCollar?$jpgMQ$');
-        }
-        &.paraBack06 {
-            background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackImageTransfer?$jpgMQ$');
-        }
-        &.paraBack07 {
-            background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackPouch?$jpgMQ$');
-        }
-        &.paraBack08 {
-            background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackCustomer?$jpgMQ$');
-        }
-        &.microFibers {
-            grid-template-columns: 1fr 59%;
-            grid-column-gap: 30px;
-            .info {
-                margin-right: 40px;
-            }
-            img {
-                transform: translateY(var(--fibers));
+        &#classic {
+            .mainImage {
+                transform: translateY(var(--classic));
                 will-change: transform;
             }
         }
-        &.packable {
-            grid-template-columns: 1fr 59%;
-            grid-column-gap: 30px;
-            .info {
-                margin-right: 40px;
+        &#seamless {
+            .collectionMain {
+                grid-template-columns: auto 61% auto;
+                grid-column-gap: 40px;
+                margin: 0 50px;
             }
-            img {
-                transform: translateY(var(--packable));
+            .mainImage {
+                padding: 0 10px 0 80px;
+                transform: translateY(var(--seamless));
                 will-change: transform;
             }
         }
+        &#compact {
+            .collectionMain {
+                grid-column-gap: 20px;
+                margin-top: 0;
+            }
+            .compactImage {
+                padding: 0 50px;
+                transform: translateY(var(--compact));
+                will-change: transform;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // <!-- ————————————————————————————————————o————————————————————————————————————o STATIC BG SCROLL -->
+    // <!-- STATIC BG SCROLL -->
+    // <!-- ————————————————————————————————————o————————————————————————————————————o STATIC BG SCROLL -->
+    .paraBack {
+        grid-template-columns: 1fr;
+        grid-template-rows: calc(100vh - 200px);
+        margin: 200px auto;
+        margin: 3px auto;
+        align-items: end;
+        height: calc(100vh - 200px);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        // background-size: 100%;
+        p {
+            bottom: 0;
+            width: 30%;
+            margin-left: 30px;
+            font-size: 26px;
+        }
+    }
+    .paraBack00 {
+        background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackThreads?$jpgMQ$');
+    }
+    .paraBack01 {
+        background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackLoom01?$jpgMQ$');
+    }
+    .paraBack02 {
+        background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackLoom02?$jpgMQ$');
+    }
+    .paraBack03 {
+        background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackPremiumDown?$jpgMQ$');
+    }
+    .paraBack04 {
+        background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackTweezers?$jpgMQ$');
+    }
+    .paraBack05 {
+        background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackCollar?$jpgMQ$');
+    }
+    .paraBack06 {
+        background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackImageTransfer?$jpgMQ$');
+    }
+    .paraBack07 {
+        background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackPouch?$jpgMQ$');
+    }
+    .paraBack08 {
+        background-image: url('http://uniqlo.scene7.com/is/image/UNIQLO/uldBackCustomer?$jpgMQ$');
+    }
+    .microFibers {
+        grid-template-columns: 1fr 59%;
+        grid-column-gap: 30px;
+        .info {
+            margin-right: 40px;
+        }
+        img {
+            transform: translateY(var(--fibers));
+            will-change: transform;
+        }
+    }
+    .packable {
+        grid-template-columns: 1fr 59%;
+        grid-column-gap: 30px;
+        .info {
+            margin-right: 40px;
+        }
+        img {
+            transform: translateY(var(--packable));
+            will-change: transform;
+        }
+    }
+
+
+
+
+
 
 
 
@@ -421,7 +474,7 @@ body {
         // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERIES -->
 		// <!-- GALLERIES -->
         // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERIES -->
-        &.gallery {
+        .gallery {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
 			margin-top: 170px;
@@ -505,22 +558,6 @@ body {
                         margin-bottom: 20px;
                         color: #2a5061;
                     }
-                    .heatCta {
-                        position: relative;
-                        top: 0;
-                        right: auto;
-                        left: 0;
-                        margin-top: 20px;
-                        .zeroCTA {
-                            color: #2a5061;
-                            border-color: #2a5061;
-                            background: transparent;
-                            &:hover {
-                                color: white;
-                                background: #2a5061;
-                            }
-                        }
-                    }
                 }
             }
             &.gallSeamless {
@@ -598,84 +635,6 @@ body {
                 margin-bottom: 100px;
             }
         }
-    } // Fixed backgrounds - setting the element rel to position text
-    .production {
-        position: relative;
-    }
-
-
-
-
-
-    .collection {
-        margin: 0 80px 300px;
-        color: white;
-        text-align: center;
-        &.panel {
-            display: block;
-        }
-        .collectionMain {
-            display: grid;
-            grid-template-columns: auto 65% auto;
-            grid-column-gap: 60px;
-            margin-top: 50px;
-        }
-        .collecFeats {
-            width: 100%;
-        }
-        .mainImage {
-            width: 100%;
-        }
-        .collecFeats {
-            margin-top: 90px;
-        }
-        .collecItem {
-            margin-bottom: 10px;
-            img {
-                width: 90%;
-                margin: 0;
-                border-radius: 50%;
-                border: 3px solid white;
-            }
-            img.thumb {
-                width: 120px;
-            }
-            p {
-                padding: 10px 0;
-                font-size: 18px;
-                word-wrap: break-word;
-            }
-        }
-        &#classic {
-            .mainImage {
-                transform: translateY(var(--classic));
-                will-change: transform;
-            }
-        }
-        &#seamless {
-            .collectionMain {
-                grid-template-columns: auto 61% auto;
-                grid-column-gap: 40px;
-                margin: 0 50px;
-            }
-            .mainImage {
-                padding: 0 10px 0 80px;
-                transform: translateY(var(--seamless));
-                will-change: transform;
-            }
-        }
-        &#compact {
-            .collectionMain {
-                grid-column-gap: 20px;
-                margin-top: 0;
-            }
-            .compactImage {
-                padding: 0 50px;
-                transform: translateY(var(--compact));
-                will-change: transform;
-            }
-        }
-    }
 
 
 
@@ -688,13 +647,10 @@ body {
     * {
         box-sizing: border-box;
     }
-    position: fixed;
-    bottom: 20px;
-    right: 29px;
-    width: auto;
-    min-width: 150px;
+    display: flex;
+    justify-content: center;
     height: 40px;
-    margin: 0 auto;
+    margin: 40px auto;
     overflow: hidden;
     z-index: 5;
 }
@@ -702,6 +658,7 @@ body {
 .theCtas .zeroCTA {
     float: left;
     display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     height: 40px;
@@ -709,24 +666,76 @@ body {
     min-width: 150px;
     padding-top: 0;
     margin: 0;
-    font-family: $font-UQReg;
+    font-family: $font-UQBold;
     font-size: 1.1vw;
-    color: black;
+    color: white;
     text-transform: uppercase;
     text-decoration: none;
-    border: 3px solid black;
-    background: white;
+    border: 3px solid white;
+    background: transparent;
     transition: all 0.3s;
+    // span {
+    //     color: white;
+    // }
     &:hover {
-        color: white;
         background: black;
         transition: all 0.3s;
+        span {
+            color: white;
+        }
     }
+}
+
+.theCtas a {
+    color: black;
 }
 
 @media (min-width: 1281px) {
     .theCtas .zeroCTA {
         font-size: 14px;
+    }
+}
+
+.heatCta {
+    display: block;
+    position: relative;
+    top: 0;
+    right: auto;
+    left: 0;
+    margin-top: 20px;
+    .zeroCTA {
+        color: #2a5061;
+        border-color: #2a5061;
+        background: transparent;
+        span {
+            color: #2a5061;
+        }
+        &:hover {
+            background: #2a5061;
+            span {
+                color: white;
+            }
+        }
+    }
+}
+
+.persistent {
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 28px;
+    height: 37px;
+    background: white;
+    border: 3px solid black;
+    .zeroCTA {
+        border: none;
+    }
+    span {
+        color: black;
+    }
+    &:hover {
+        color: white;
+        background: black;
     }
 }
 

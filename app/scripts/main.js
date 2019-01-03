@@ -145,8 +145,8 @@ const lightweight = basicScroll.create({
   to: 'bottom-top',
   props: {
     '--light': {
-      from: '400px',
-      to: '-380px'
+      from: '500px',
+      to: '-430px'
     }
   }
 })
@@ -158,7 +158,7 @@ const heatRetention = basicScroll.create({
   props: {
     '--heat': {
       from: '500px',
-      to: '-330px'
+      to: '-430px'
     }
   }
 })
@@ -169,8 +169,8 @@ const repellent = basicScroll.create({
   to: 'bottom-top',
   props: {
     '--rep': {
-      from: '400px',
-      to: '-330px'
+      from: '500px',
+      to: '-430px'
     }
   }
 })
@@ -206,7 +206,7 @@ const collecSeamless = basicScroll.create({
   props: {
     '--seamless': {
       from: '280px',
-      to: '-220px'
+      to: '-250px'
     }
   }
 })
@@ -217,8 +217,8 @@ const collecCompact = basicScroll.create({
   to: 'top-top',
   props: {
     '--compact': {
-      from: '400px',
-      to: '-10px'
+      from: '280px',
+      to: '-20px'
     }
   }
 })
