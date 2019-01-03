@@ -198,8 +198,8 @@ body {
                 display: block;
                 width: 80%;
                 margin: 30px auto 0px 0;
-                transform: translateY(var(--colors));
-                will-change: transform;
+                // transform: translateY(var(--colors));
+                // will-change: transform;
             }
             .sectionHeader {
                 position: relative;
@@ -222,6 +222,8 @@ body {
                 width: 12%;
                 height: 85%;
                 z-index: 6;
+                opacity: var(--opacity);
+                will-change: opacity;
                 &.gradBackRight {
                     right: 0;
                     background-image: linear-gradient(to right, rgba(255,0,0,0), #1a234a);
@@ -623,8 +625,6 @@ body {
         }
         .mainImage {
             width: 100%;
-            transform: translateY(var(--classic));
-            will-change: transform;
         }
         .collecFeats {
             margin-top: 90px;
@@ -637,24 +637,38 @@ body {
                 border-radius: 50%;
                 border: 3px solid white;
             }
+            img.thumb {
+                width: 120px;
+            }
             p {
                 padding: 10px 0;
                 font-size: 18px;
                 word-wrap: break-word;
             }
         }
+        &#classic {
+            .mainImage {
+                transform: translateY(var(--classic));
+                will-change: transform;
+            }
+        }
         &#seamless {
             .collectionMain {
-                grid-template-columns: auto 54% auto;
-                grid-column-gap: 120px;
+                grid-template-columns: auto 61% auto;
+                grid-column-gap: 40px;
+                margin: 0 50px;
             }
             .mainImage {
-                padding: 0 20px 0 60px;
+                padding: 0 10px 0 80px;
                 transform: translateY(var(--seamless));
                 will-change: transform;
             }
         }
         &#compact {
+            .collectionMain {
+                grid-column-gap: 20px;
+                margin-top: 0;
+            }
             .compactImage {
                 padding: 0 50px;
                 transform: translateY(var(--compact));

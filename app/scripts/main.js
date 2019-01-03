@@ -119,13 +119,13 @@ const whatIs = basicScroll.create({
 
 
 const colors = basicScroll.create({
-  elem: document.querySelector('.colors'),
+  elem: document.querySelector('.gradBack'),
   from: 'top-bottom',
-  to: 'middle-middle',
+  to: 'top-middle',
   props: {
-    '--colors': {
-      from: '300px',
-      to: '0px'
+    '--opacity': {
+      from: 0,
+      to: 1
     }
   }
 })
@@ -136,9 +136,9 @@ const colors = basicScroll.create({
 
 
 
-// <!-- ————————————————————————————————————o————————————————————————————————————o FEATURES GENERAL -->
-// <!-- FEATURES GENERAL -->
-// <!-- ————————————————————————————————————o————————————————————————————————————o FEATURES GENERAL -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o FEATURES -->
+// <!-- FEATURES -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o FEATURES -->
 const lightweight = basicScroll.create({
   elem: document.querySelector('.lightImage'),
   from: 'top-bottom',
@@ -157,8 +157,8 @@ const heatRetention = basicScroll.create({
   to: 'bottom-top',
   props: {
     '--heat': {
-      from: '400px',
-      to: '-430px'
+      from: '500px',
+      to: '-330px'
     }
   }
 })
@@ -170,7 +170,7 @@ const repellent = basicScroll.create({
   props: {
     '--rep': {
       from: '400px',
-      to: '-450px'
+      to: '-330px'
     }
   }
 })
@@ -194,7 +194,7 @@ const collecClassic = basicScroll.create({
   props: {
     '--classic': {
       from: '260px',
-      to: '-140px'
+      to: '-120px'
     }
   }
 })
@@ -205,21 +205,20 @@ const collecSeamless = basicScroll.create({
   to: 'bottom-top',
   props: {
     '--seamless': {
-      from: '250px',
-      to: '-250px'
+      from: '280px',
+      to: '-220px'
     }
   }
 })
 
 const collecCompact = basicScroll.create({
-  elem: document.querySelector('.compactImage'),
+  elem: document.querySelector('#compact .mainImage'),
   from: 'top-bottom',
   to: 'top-top',
   props: {
     '--compact': {
       from: '400px',
-      // to: '-390px'
-      to: '-320px'
+      to: '-10px'
     }
   }
 })
@@ -272,29 +271,29 @@ const collecCompact = basicScroll.create({
 // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY COMPACT -->
 // <!-- GALLERY COMPACT -->
 // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY COMPACT -->
-// const violin = basicScroll.create({
-//   elem: document.querySelector('img.violin'),
-//   from: 'top-bottom',
-//   to: 'top-top',
-//   props: {
-//     '--violin': {
-//       from: '160px',
-//       to: '0px'
-//     }
-//   }
-// })
+const violin = basicScroll.create({
+  elem: document.querySelector('img.violin'),
+  from: 'top-bottom',
+  to: 'top-top',
+  props: {
+    '--violin': {
+      from: '160px',
+      to: '0px'
+    }
+  }
+})
 
-// const gotham = basicScroll.create({
-//   elem: document.querySelector('.gotham'),
-//   from: 'top-bottom',
-//   to: 'middle-top',
-//   props: {
-//     '--gotham': {
-//       from: '160px',
-//       to: '-50px'
-//     }
-//   }
-// })
+const gotham = basicScroll.create({
+  elem: document.querySelector('.gotham'),
+  from: 'top-bottom',
+  to: 'middle-top',
+  props: {
+    '--gotham': {
+      from: '160px',
+      to: '-50px'
+    }
+  }
+})
 
 
 
