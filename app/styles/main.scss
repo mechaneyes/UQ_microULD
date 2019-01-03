@@ -95,8 +95,8 @@ body {
         transition: all 0.3s;
     }
     .panel {
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
         align-items: center;
         min-height: 100vh;
         margin: 100px 0;
@@ -125,36 +125,6 @@ body {
             h2 {
                 margin: 40px 0;
                 text-transform: uppercase;
-            }
-            h3 {
-                margin: 0 0 5px;
-                font-family: $font-UQReg;
-                font-size: 21px;
-                font-weight: 400;
-                line-height: 1;
-                text-transform: uppercase;
-            }
-
-            .theCtas {
-                display: none;
-                clear: both;
-                position: relative;
-                top: 20px;
-                left: 0;
-                right: auto; // margin-top: 20px;
-                .zeroCTA {
-                    color: white;
-                    border-color: white;
-                    background: transparent;
-                    &:hover {
-                        color: #0971b2;
-                        border-color: white;
-                        background: white;
-                    }
-                }
-            }
-            img+.theCtas {
-                top: 23px;
             }
         }
         .rightImage {
@@ -221,51 +191,7 @@ body {
                 will-change: transform;
             }
         }
-        &.anchors {
-            grid-template-columns: 1fr;
-            grid-column-gap: 40px;
-            .oneInfo {
-                .allAnchors {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-					grid-column-gap: 30px;
-					// transform: translateY(var(--anchors));
-					// will-change: transform;
-                }
-                .oneAnchor {
-                    float: left;
-                    img {
-                        float: right;
-                        width: 100%; // height: auto;
-                        margin: 30px 0 15px 0;
-                    }
-                    img.flipped {
-                        transform: scaleX(-1);
-                    }
-                }
-                .toParallax {
-                    transform: translateY(var(--anchors));
-					will-change: transform;
-                }
-                .uldLineup img {
-                    width: 100%;
-                    margin: 0;
-                }
-            }
-            .uldLineup {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-column-gap: 30px;
-                margin-top: 100px;
-                .oneLineup {
-                    text-align: center;
-                    h3 {
-                        padding-bottom: 10px;
-                        font-size: 28px;
-                    }
-                }
-            }
-        }
+
         &.colors {
             grid-template-columns: 1fr;
             .mainImage {
@@ -401,77 +327,9 @@ body {
         // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
 		// <!-- COLLECTION SECTIONS -->
         // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
-        &.collection {
-            grid-template-columns: 1fr 41%;
-            grid-column-gap: 60px;
-            margin-bottom: 200px;
-            .info {
-                .collecCol {
-                    padding: 20px 20px 0 0;
-                    &:last-child {
-                        margin-left: 30px;
-                    }
-                }
-                .collecCol+.theCtas {
-                    top: 0;
-                }
-                .collecItem {
-                    display: block;
-                    clear: both;
-                    img {
-                        width: 36%;
-                        margin: 0;
-                        padding: 0 15px 20px 0;
-                    }
-                    p {
-                        padding-right: 10px;
-                        font-size: 18px;
-                        word-wrap: break-word;
-                    }
-                }
-			}
-            .collecCol {
-                float: left;
-                display: block;
-                width: 50%;
-			}
-			&.collecSeamless {
-				.seamelessImage {
-					width: 113%;
-					margin-left: -60px;
-					transform: translateY(var(--seamless));
-					will-change: transform;
-				}
-			}
-			&.collecCompact {
-				grid-template-columns: 43% 1fr;
-				.compactImage {
-					transform: translateY(var(--compact));
-					will-change: transform;
-				}
-				.collecFeats {
-					overflow: hidden;
-					width: 100%;
-					margin-top: 20px;
-					.collecItem {
-						clear: none;
-						float: left;
-						width: 48%;
-						// border: 1px solid blue;
-					}
-				}
-			}
-			&.collecClassic {
-                grid-template-columns: 1fr 51%;
-                grid-column-gap: 20px;
-				.classicImage {
-					width: 100%;
-					// margin-left: -60px;
-					transform: translateY(var(--classic));
-					will-change: transform;
-				}
-			}
-        }
+
+
+
 
 
 
@@ -742,6 +600,74 @@ body {
     .production {
         position: relative;
     }
+
+
+
+
+
+    .collection {
+        margin: 0 80px 300px;
+        color: white;
+        text-align: center;
+        &.panel {
+            display: block;
+        }
+        .collectionMain {
+            display: grid;
+            grid-template-columns: auto 65% auto;
+            grid-column-gap: 60px;
+            margin-top: 50px;
+        }
+        .collecFeats {
+            width: 100%;
+        }
+        .mainImage {
+            width: 100%;
+            transform: translateY(var(--classic));
+            will-change: transform;
+        }
+        .collecFeats {
+            margin-top: 90px;
+        }
+        .collecItem {
+            margin-bottom: 10px;
+            img {
+                width: 90%;
+                margin: 0;
+                border-radius: 50%;
+                border: 3px solid white;
+            }
+            p {
+                padding: 10px 0;
+                font-size: 18px;
+                word-wrap: break-word;
+            }
+        }
+        &#seamless {
+            .collectionMain {
+                grid-template-columns: auto 54% auto;
+                grid-column-gap: 120px;
+            }
+            .mainImage {
+                padding: 0 20px 0 60px;
+                transform: translateY(var(--seamless));
+                will-change: transform;
+            }
+        }
+        &#compact {
+            .compactImage {
+                padding: 0 50px;
+                transform: translateY(var(--compact));
+                will-change: transform;
+            }
+        }
+    }
+
+
+
+
+
+
 }
 
 .theCtas {

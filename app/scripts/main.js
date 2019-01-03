@@ -187,42 +187,42 @@ const repellent = basicScroll.create({
 // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
 // <!-- COLLECTIONS -->
 // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
-// const collecClassic = basicScroll.create({
-//   elem: document.querySelector('.classicImage'),
-//   from: 'top-bottom',
-//   to: 'top-top',
-//   props: {
-//     '--classic': {
-//       from: '300px',
-//       to: '-160px'
-//     }
-//   }
-// })
+const collecClassic = basicScroll.create({
+  elem: document.querySelector('#classic .mainImage'),
+  from: 'top-bottom',
+  to: 'top-top',
+  props: {
+    '--classic': {
+      from: '260px',
+      to: '-140px'
+    }
+  }
+})
 
-// const collecSeamless = basicScroll.create({
-//   elem: document.querySelector('.seamelessImage'),
-//   from: 'top-bottom',
-//   to: 'bottom-top',
-//   props: {
-//     '--seamless': {
-//       from: '300px',
-//       to: '-400px'
-//     }
-//   }
-// })
+const collecSeamless = basicScroll.create({
+  elem: document.querySelector('#seamless .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--seamless': {
+      from: '250px',
+      to: '-250px'
+    }
+  }
+})
 
-// const collecCompact = basicScroll.create({
-//   elem: document.querySelector('.compactImage'),
-//   from: 'top-bottom',
-//   to: 'top-top',
-//   props: {
-//     '--compact': {
-//       from: '400px',
-//       // to: '-390px'
-//       to: '-200px'
-//     }
-//   }
-// })
+const collecCompact = basicScroll.create({
+  elem: document.querySelector('.compactImage'),
+  from: 'top-bottom',
+  to: 'top-top',
+  props: {
+    '--compact': {
+      from: '400px',
+      // to: '-390px'
+      to: '-320px'
+    }
+  }
+})
 
 
 
@@ -236,29 +236,29 @@ const repellent = basicScroll.create({
 // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY SEAMLESS -->
 // <!-- GALLERY SEAMLESS -->
 // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY SEAMLESS -->
-const rainy = basicScroll.create({
-  elem: document.querySelector('.rainy'),
-  from: 'top-bottom',
-  to: 'bottom-top',
-  props: {
-    '--rainy': {
-      from: '210px',
-      to: '-120px'
-    }
-  }
-})
+// const rainy = basicScroll.create({
+//   elem: document.querySelector('.rainy'),
+//   from: 'top-bottom',
+//   to: 'bottom-top',
+//   props: {
+//     '--rainy': {
+//       from: '210px',
+//       to: '-120px'
+//     }
+//   }
+// })
 
-const stairs = basicScroll.create({
-  elem: document.querySelector('img.stairs'),
-  from: 'top-bottom',
-  to: 'middle-top',
-  props: {
-    '--stairs': {
-      from: '250px',
-      to: '-150px'
-    }
-  }
-})
+// const stairs = basicScroll.create({
+//   elem: document.querySelector('img.stairs'),
+//   from: 'top-bottom',
+//   to: 'middle-top',
+//   props: {
+//     '--stairs': {
+//       from: '250px',
+//       to: '-150px'
+//     }
+//   }
+// })
 
 
 
@@ -272,29 +272,29 @@ const stairs = basicScroll.create({
 // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY COMPACT -->
 // <!-- GALLERY COMPACT -->
 // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY COMPACT -->
-const violin = basicScroll.create({
-  elem: document.querySelector('img.violin'),
-  from: 'top-bottom',
-  to: 'top-top',
-  props: {
-    '--violin': {
-      from: '160px',
-      to: '0px'
-    }
-  }
-})
+// const violin = basicScroll.create({
+//   elem: document.querySelector('img.violin'),
+//   from: 'top-bottom',
+//   to: 'top-top',
+//   props: {
+//     '--violin': {
+//       from: '160px',
+//       to: '0px'
+//     }
+//   }
+// })
 
-const gotham = basicScroll.create({
-  elem: document.querySelector('.gotham'),
-  from: 'top-bottom',
-  to: 'middle-top',
-  props: {
-    '--gotham': {
-      from: '160px',
-      to: '-50px'
-    }
-  }
-})
+// const gotham = basicScroll.create({
+//   elem: document.querySelector('.gotham'),
+//   from: 'top-bottom',
+//   to: 'middle-top',
+//   props: {
+//     '--gotham': {
+//       from: '160px',
+//       to: '-50px'
+//     }
+//   }
+// })
 
 
 
@@ -308,29 +308,29 @@ const gotham = basicScroll.create({
 // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY CLASSIC -->
 // <!-- GALLERY CLASSIC -->
 // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY CLASSIC -->
-const oculus = basicScroll.create({
-  elem: document.querySelector('img.oculus'),
-  from: 'top-bottom',
-  to: 'middle-top',
-  props: {
-    '--oculus': {
-      from: '220px',
-      to: '0px'
-    }
-  }
-})
+// const oculus = basicScroll.create({
+//   elem: document.querySelector('img.oculus'),
+//   from: 'top-bottom',
+//   to: 'middle-top',
+//   props: {
+//     '--oculus': {
+//       from: '220px',
+//       to: '0px'
+//     }
+//   }
+// })
 
-const chinatown = basicScroll.create({
-  elem: document.querySelector('.chinatown'),
-  from: 'top-bottom',
-  to: 'middle-top',
-  props: {
-    '--chinatown': {
-      from: '200px',
-      to: '-150px'
-    }
-  }
-})
+// const chinatown = basicScroll.create({
+//   elem: document.querySelector('.chinatown'),
+//   from: 'top-bottom',
+//   to: 'middle-top',
+//   props: {
+//     '--chinatown': {
+//       from: '200px',
+//       to: '-150px'
+//     }
+//   }
+// })
 
 
 
