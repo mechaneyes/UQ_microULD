@@ -11,7 +11,7 @@ $(window).scroll(function () {
   var $window = $(window),
     $body = $('body'),
     // $body = $('#coloursScrl'),
-    $panel = $('.panel');
+    $panel = $('section');
 
   // Change 33% earlier than scroll position so colour is there when you arrive.
   var scroll = $window.scrollTop() + ($window.height() / 3);
@@ -174,6 +174,18 @@ const collecClassic = basicScroll.create({
     '--classic': {
       from: '260px',
       to: '-120px'
+    }
+  }
+})
+
+const collecClassic02 = basicScroll.create({
+  elem: document.querySelector('#classic02 .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--classic02': {
+      from: '260px',
+      to: '-470px'
     }
   }
 })
