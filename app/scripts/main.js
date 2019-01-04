@@ -70,11 +70,6 @@ $(window).scroll(function () {
     $('.uldVideo').removeClass('fadeIn');
   }
 
-
-
-
-
-
 }).scroll();
 
 
@@ -95,22 +90,6 @@ const whatIs = basicScroll.create({
     }
   }
 })
-
-
-
-
-
-// const anchors = basicScroll.create({
-//   elem: document.querySelector('.anchors'),
-//   from: 'top-bottom',
-//   to: 'top-top',
-//   props: {
-//     '--anchors': {
-//       from: '300px',
-//       to: '0px'
-//     }
-//   }
-// })
 
 
 
