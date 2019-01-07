@@ -166,17 +166,6 @@ const repellent = basicScroll.create({
 // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
 // <!-- COLLECTIONS -->
 // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
-const collecClassic = basicScroll.create({
-  elem: document.querySelector('#classic .mainImage'),
-  from: 'top-bottom',
-  to: 'top-top',
-  props: {
-    '--classic': {
-      from: '260px',
-      to: '-120px'
-    }
-  }
-})
 
 const collecClassic02 = basicScroll.create({
   elem: document.querySelector('#classic02 .mainImage'),
@@ -190,26 +179,26 @@ const collecClassic02 = basicScroll.create({
   }
 })
 
-const collecSeamless = basicScroll.create({
-  elem: document.querySelector('#seamless .mainImage'),
+const collecSeamless02 = basicScroll.create({
+  elem: document.querySelector('#seamless02 .mainImage'),
   from: 'top-bottom',
   to: 'bottom-top',
   props: {
-    '--seamless': {
-      from: '280px',
-      to: '-250px'
+    '--seamless02': {
+      from: '260px',
+      to: '-460px'
     }
   }
 })
 
-const collecCompact = basicScroll.create({
-  elem: document.querySelector('#compact .mainImage'),
+const collecCompact02 = basicScroll.create({
+  elem: document.querySelector('#compact02 .mainImage'),
   from: 'top-bottom',
-  to: 'top-top',
+  to: 'bottom-top',
   props: {
-    '--compact': {
-      from: '280px',
-      to: '-20px'
+    '--compact02': {
+      from: '260px',
+      to: '-260px'
     }
   }
 })
