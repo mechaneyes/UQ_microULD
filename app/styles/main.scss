@@ -63,6 +63,7 @@ body {
         text-transform: uppercase;
     }
     h2 {
+        text-align: center;
         font-family: $font-UQReg;
         font-size: 60px;
         color: white;
@@ -78,6 +79,7 @@ body {
         font-size: 21px;
         font-weight: 300;
         line-height: 1.7;
+        text-align: center;
     }
     .icon {
         margin-bottom: -2px;
@@ -173,6 +175,7 @@ body {
                     color: red;
                     text-transform: uppercase;
                     line-height: normal;
+                    text-align: left;
                 }
                 .slick-slide.tick {
                     display: inline-block;
@@ -332,58 +335,58 @@ body {
     // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
     // <!-- COLLECTION SECTIONS -->
     // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
-    .collection {
-        margin: 0 80px 300px;
-        color: white;
-        text-align: center;
-        &.panel {
-            display: block;
-        }
-        .collectionMain {
-            display: grid;
-            grid-template-columns: auto 65% auto;
-            grid-column-gap: 60px;
-            margin-top: 50px;
-        }
-        .collecFeats {
-            width: 100%;
-        }
-        .mainImage {
-            width: 100%;
-        }
-        .collecFeats {
-            margin-top: 90px;
-        }
-        &#classic {
-            .mainImage {
-                transform: translateY(var(--classic));
-                will-change: transform;
-            }
-        }
-        &#seamless {
-            .collectionMain {
-                grid-template-columns: auto 61% auto;
-                grid-column-gap: 40px;
-                margin: 0 50px;
-            }
-            .mainImage {
-                padding: 0 10px 0 80px;
-                transform: translateY(var(--seamless));
-                will-change: transform;
-            }
-        }
-        &#compact {
-            .collectionMain {
-                grid-column-gap: 20px;
-                margin-top: 0;
-            }
-            .compactImage {
-                padding: 0 50px;
-                transform: translateY(var(--compact));
-                will-change: transform;
-            }
-        }
-    }
+    // .collection {
+    //     margin: 0 80px 300px;
+    //     color: white;
+    //     text-align: center;
+    //     &.panel {
+    //         display: block;
+    //     }
+    //     .collectionMain {
+    //         display: grid;
+    //         grid-template-columns: auto 65% auto;
+    //         grid-column-gap: 60px;
+    //         margin-top: 50px;
+    //     }
+    //     .collecFeats {
+    //         width: 100%;
+    //     }
+    //     .mainImage {
+    //         width: 100%;
+    //     }
+    //     .collecFeats {
+    //         margin-top: 90px;
+    //     }
+    //     &#classic {
+    //         .mainImage {
+    //             transform: translateY(var(--classic));
+    //             will-change: transform;
+    //         }
+    //     }
+    //     &#seamless {
+    //         .collectionMain {
+    //             grid-template-columns: auto 61% auto;
+    //             grid-column-gap: 40px;
+    //             margin: 0 50px;
+    //         }
+    //         .mainImage {
+    //             padding: 0 10px 0 80px;
+    //             transform: translateY(var(--seamless));
+    //             will-change: transform;
+    //         }
+    //     }
+    //     &#compact {
+    //         .collectionMain {
+    //             grid-column-gap: 20px;
+    //             margin-top: 0;
+    //         }
+    //         .compactImage {
+    //             padding: 0 50px;
+    //             transform: translateY(var(--compact));
+    //             will-change: transform;
+    //         }
+    //     }
+    // }
 
 
 
@@ -396,69 +399,72 @@ body {
     // <!-- COLLECTION v2 -->
     // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION v2 -->
     .collection02 {
+        overflow: hidden;
         position: relative;
         align-items: center;
         min-height: 100vh;
-        margin: 100px 0;
+        padding: 100px 0;
         color: white;
-        text-align: center;
+        text-align: left;
         .collecItem {
             position: relative;
             width: 222px;
+            z-index: 2;
+            float: right;
+            top: 30px;
+            right: 1%;
+        }
+        .mainImage {
+            z-index: 1;
+            position: absolute;
+            top: 19%;
+            right: 2%;
+            will-change: transform;
         }
         .editorialImg {
-            position: absolute;
+            position: relative;
             width: 60%;
-            top: 280px;
+            top: 95px;
             left: 2%;
+            padding-bottom: 40px;
         }
         &#classic02 {
-            .collecItem {
-                z-index: 2;
-                float: right;
-                top: 30px;
-                right: 1%;
-            }
             .mainImage {
-                z-index: 1;
-                position: absolute;
-                top: 19%;
-                right: 2%;
                 width: 58%;
-                transform: translateY(var(--classic02));
-                will-change: transform;
+                transform: translateY(var(--classicLarge));
             }
         }
         &#seamless02 {
-            .collecItem {
-                z-index: 2;
-                float: right;
-                top: 30px;
-                right: 1%;
-            }
             .mainImage {
-                z-index: 1;
-                position: absolute;
-                top: 19%;
-                right: 2%;
-                transform: translateY(var(--seamless02));
-                will-change: transform;
+                transform: translateY(var(--seamlessLarge));
             }
         }
         &#compact02 {
-            .collecItem {
-                z-index: 2;
-                float: right;
-                top: 30px;
-                right: 1%;
-            }
             .mainImage {
-                z-index: 1;
-                position: absolute;
-                top: 19%;
-                right: 2%;
-                transform: translateY(var(--compact02));
-                will-change: transform;
+                transform: translateY(var(--compactLarge));
+            }
+            .editorialImg {
+                // top: 300px;
+            }
+        }
+        @media (max-height: 800px) {
+            min-height: calc(100vh + 300px);
+            &#classic02 {
+                .mainImage {
+                    transform: translateY(var(--classicSmall));
+                }
+            }
+            &#seamless02 {
+                transform: translateY(var(--seamlessSmall));
+                .mainImage {
+                    right: 10%;
+                    width: 40%;
+                }
+            }
+            &#compact02 {
+                .mainImage {
+                    transform: translateY(var(--compactSmall));
+                }
             }
         }
     }
@@ -732,9 +738,10 @@ body {
         box-sizing: border-box;
     }
     display: flex;
-    justify-content: center;
+    justify-content: start;
     height: 40px;
-    margin: 40px auto;
+    // margin: 40px auto 40px 2%;
+    margin-left: 2%;
     overflow: hidden;
     z-index: 5;
 }
@@ -742,7 +749,7 @@ body {
 .theCtas .zeroCTA {
     float: left;
     display: flex;
-    display: none;
+    // display: none;
     align-items: center;
     justify-content: center;
     height: 40px;
@@ -758,14 +765,14 @@ body {
     border: 3px solid white;
     background: transparent;
     transition: all 0.3s;
-    // span {
-    //     color: white;
-    // }
+    &:first-child {
+        margin-right: 15px;
+    }
     &:hover {
-        background: black;
+        background: white;
         transition: all 0.3s;
         span {
-            color: white;
+            color: black;
         }
     }
 }
@@ -778,6 +785,11 @@ body {
     .theCtas .zeroCTA {
         font-size: 14px;
     }
+}
+
+.family .theCtas {
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .heatCta {

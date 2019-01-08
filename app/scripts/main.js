@@ -167,38 +167,81 @@ const repellent = basicScroll.create({
 // <!-- COLLECTIONS -->
 // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
 
-const collecClassic02 = basicScroll.create({
+
+// <!-- ————————————————————————————————————o LARGE SCREEN -->
+// <!-- LARGE SCREEN -->
+const collecClassicLarge = basicScroll.create({
   elem: document.querySelector('#classic02 .mainImage'),
   from: 'top-bottom',
   to: 'bottom-top',
   props: {
-    '--classic02': {
+    '--classicLarge': {
       from: '260px',
-      to: '-470px'
+      to: '-180px'
     }
   }
 })
 
-const collecSeamless02 = basicScroll.create({
+const collecSeamlessLarge = basicScroll.create({
   elem: document.querySelector('#seamless02 .mainImage'),
   from: 'top-bottom',
   to: 'bottom-top',
   props: {
-    '--seamless02': {
+    '--seamlessLarge': {
       from: '260px',
-      to: '-460px'
+      to: '-170px'
     }
   }
 })
 
-const collecCompact02 = basicScroll.create({
+const collecCompactLarge = basicScroll.create({
   elem: document.querySelector('#compact02 .mainImage'),
   from: 'top-bottom',
   to: 'bottom-top',
   props: {
-    '--compact02': {
+    '--compactLarge': {
+      from: '460px',
+      to: '-230px'
+    }
+  }
+})
+
+
+
+// <!-- ————————————————————————————————————o SMALL SCREEN -->
+// <!-- SMALL SCREEN -->
+const collecClassicSmall = basicScroll.create({
+  elem: document.querySelector('#classic02 .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--classicSmall': {
       from: '260px',
-      to: '-260px'
+      to: '-400px'
+    }
+  }
+})
+
+const collecSeamlessSmall = basicScroll.create({
+  elem: document.querySelector('#seamless02 .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--seamlessSmall': {
+      from: '260px',
+      to: '-520px'
+    }
+  }
+})
+
+const collecCompactSmall = basicScroll.create({
+  elem: document.querySelector('#compact02 .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--compactSmall': {
+      from: '260px',
+      to: '-200px'
     }
   }
 })
