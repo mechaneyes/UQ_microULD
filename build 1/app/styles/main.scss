@@ -228,6 +228,7 @@ body {
 
 
         &.repellent {
+            grid-column-gap: 70px;
             img.mainImage {
                 transform: translateY(var(--rep));
                 will-change: transform;
@@ -332,69 +333,6 @@ body {
 
 
 
-    // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
-    // <!-- COLLECTION SECTIONS -->
-    // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTIONS -->
-    // .collection {
-    //     margin: 0 80px 300px;
-    //     color: white;
-    //     text-align: center;
-    //     &.panel {
-    //         display: block;
-    //     }
-    //     .collectionMain {
-    //         display: grid;
-    //         grid-template-columns: auto 65% auto;
-    //         grid-column-gap: 60px;
-    //         margin-top: 50px;
-    //     }
-    //     .collecFeats {
-    //         width: 100%;
-    //     }
-    //     .mainImage {
-    //         width: 100%;
-    //     }
-    //     .collecFeats {
-    //         margin-top: 90px;
-    //     }
-    //     &#classic {
-    //         .mainImage {
-    //             transform: translateY(var(--classic));
-    //             will-change: transform;
-    //         }
-    //     }
-    //     &#seamless {
-    //         .collectionMain {
-    //             grid-template-columns: auto 61% auto;
-    //             grid-column-gap: 40px;
-    //             margin: 0 50px;
-    //         }
-    //         .mainImage {
-    //             padding: 0 10px 0 80px;
-    //             transform: translateY(var(--seamless));
-    //             will-change: transform;
-    //         }
-    //     }
-    //     &#compact {
-    //         .collectionMain {
-    //             grid-column-gap: 20px;
-    //             margin-top: 0;
-    //         }
-    //         .compactImage {
-    //             padding: 0 50px;
-    //             transform: translateY(var(--compact));
-    //             will-change: transform;
-    //         }
-    //     }
-    // }
-
-
-
-
-
-
-
-
     // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION v2 -->
     // <!-- COLLECTION v2 -->
     // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION v2 -->
@@ -445,6 +383,46 @@ body {
             }
             .editorialImg {
                 // top: 300px;
+            }
+        }
+        // @media (max-height: 800px) {
+        //     min-height: calc(100vh + 300px);
+        //     &#classic02 {
+        //         .mainImage {
+        //             transform: translateY(var(--classicSmall));
+        //         }
+        //     }
+        //     &#seamless02 {
+        //         transform: translateY(var(--seamlessSmall));
+        //         .mainImage {
+        //             right: 10%;
+        //             width: 40%;
+        //         }
+        //     }
+        //     &#compact02 {
+        //         .mainImage {
+        //             transform: translateY(var(--compactSmall));
+        //         }
+        //     }
+        // }
+        @media (max-height: 1085px) {
+            min-height: calc(100vh + 300px);
+            &#classic02 {
+                .mainImage {
+                    transform: translateY(var(--classic1085));
+                }
+            }
+            &#seamless02 {
+                transform: translateY(var(--seamless1085));
+                .mainImage {
+                    right: 10%;
+                    width: 40%;
+                }
+            }
+            &#compact02 {
+                .mainImage {
+                    transform: translateY(var(--compact1085));
+                }
             }
         }
         @media (max-height: 800px) {
@@ -640,7 +618,7 @@ body {
                     h2 {
                         margin: 0;
                         padding-bottom: 5px;
-                        font-size: 50px;
+                        font-size: 43px;
                         color: #e66439;
                         color: #2a5061;
                     }
@@ -723,6 +701,15 @@ body {
             }
             &.finalGallery {
                 margin-bottom: 100px;
+                h2 {
+                    text-align: left;
+                }
+                p {
+                    text-align: left;
+                }
+                .theCtas {
+                    margin-left: 0;
+                }
             }
         }
 

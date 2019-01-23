@@ -168,45 +168,6 @@ const repellent = basicScroll.create({
 // <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
 
 
-// <!-- ————————————————————————————————————o LARGE SCREEN -->
-// <!-- LARGE SCREEN -->
-const collecClassicLarge = basicScroll.create({
-  elem: document.querySelector('#classic02 .mainImage'),
-  from: 'top-bottom',
-  to: 'bottom-top',
-  props: {
-    '--classicLarge': {
-      from: '260px',
-      to: '-180px'
-    }
-  }
-})
-
-const collecSeamlessLarge = basicScroll.create({
-  elem: document.querySelector('#seamless02 .mainImage'),
-  from: 'top-bottom',
-  to: 'bottom-top',
-  props: {
-    '--seamlessLarge': {
-      from: '260px',
-      to: '-170px'
-    }
-  }
-})
-
-const collecCompactLarge = basicScroll.create({
-  elem: document.querySelector('#compact02 .mainImage'),
-  from: 'top-bottom',
-  to: 'bottom-top',
-  props: {
-    '--compactLarge': {
-      from: '460px',
-      to: '-230px'
-    }
-  }
-})
-
-
 
 // <!-- ————————————————————————————————————o SMALL SCREEN -->
 // <!-- SMALL SCREEN -->
@@ -246,6 +207,85 @@ const collecCompactSmall = basicScroll.create({
   }
 })
 
+
+
+// <!-- ————————————————————————————————————o MAX HEIGHT: 1085px -->
+// <!-- MAX HEIGHT: 1085px -->
+const collecClassic1085 = basicScroll.create({
+  elem: document.querySelector('#classic02 .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--classic1085': {
+      from: '260px',
+      to: '-300px'
+    }
+  }
+})
+
+const collecSeamless1085 = basicScroll.create({
+  elem: document.querySelector('#seamless02 .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--seamless1085': {
+      from: '260px',
+      to: '-520px'
+    }
+  }
+})
+
+const collecCompact1085 = basicScroll.create({
+  elem: document.querySelector('#compact02 .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--compact1085': {
+      from: '260px',
+      to: '-200px'
+    }
+  }
+})
+
+
+
+// <!-- ————————————————————————————————————o LARGE SCREEN -->
+// <!-- LARGE SCREEN -->
+const collecClassicLarge = basicScroll.create({
+  elem: document.querySelector('#classic02 .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--classicLarge': {
+      from: '260px',
+      to: '-180px'
+    }
+  }
+})
+
+const collecSeamlessLarge = basicScroll.create({
+  elem: document.querySelector('#seamless02 .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--seamlessLarge': {
+      from: '260px',
+      to: '-340px'
+    }
+  }
+})
+
+const collecCompactLarge = basicScroll.create({
+  elem: document.querySelector('#compact02 .mainImage'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--compactLarge': {
+      from: '460px',
+      to: '-230px'
+    }
+  }
+})
 
 
 

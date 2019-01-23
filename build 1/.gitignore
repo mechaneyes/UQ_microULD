@@ -7,6 +7,5 @@
 **/app/images
 **/app/images/*
 !**/app/images/.DS_Store
-**/.gitTemp
+**/.gitAddedLater
 \ Assets\ 002
-**/Screenshots
