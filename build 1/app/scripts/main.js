@@ -53,12 +53,12 @@ $(window).scroll(function () {
   // console.log('bottom_of_element: ' + bottom_of_element)
 
   if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
-    // The element is visible, do something
+    // element is visible
     // console.log('visible');
     $('.uldVideo').addClass('fadeOut');
     $('.uldVideo').removeClass('fadeIn');
   } else {
-    // The element is not visible, do something else
+    // element is not visible
     // console.log('NOT visible');
     $('.uldVideo').removeClass('fadeOut');
     $('.uldVideo').addClass('fadeIn');
@@ -178,7 +178,7 @@ const collecClassicSmall = basicScroll.create({
   props: {
     '--classicSmall': {
       from: '260px',
-      to: '-400px'
+      to: '-580px'
     }
   }
 })
@@ -190,7 +190,7 @@ const collecSeamlessSmall = basicScroll.create({
   props: {
     '--seamlessSmall': {
       from: '260px',
-      to: '-520px'
+      to: '-590px'
     }
   }
 })

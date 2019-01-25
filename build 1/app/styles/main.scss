@@ -239,6 +239,7 @@ body {
 
         &.colors {
             grid-template-columns: 1fr;
+            margin: 300px 0;
             .mainImage {
                 display: block;
                 width: 80%;
@@ -269,11 +270,11 @@ body {
                 will-change: opacity;
                 &.gradBackRight {
                     right: 0;
-                    background-image: linear-gradient(to right, rgba(255,0,0,0), #1a234a);
+                    background-image: linear-gradient(to right, rgba(255,0,0,0), #164f32);
                 }
                 &.gradBackLeft {
                     left: 0;
-                    background-image: linear-gradient(to left, rgba(255,0,0,0), #1a234a);
+                    background-image: linear-gradient(to left, rgba(255,0,0,0), #164f32);
                 }
             }
             .colorTicker {
@@ -283,6 +284,13 @@ body {
                     margin-right: 6px;
                 }
             }
+        }
+
+
+
+        &.howMade {
+            height: 1px;
+            min-height: 1px;
         }
 
 
@@ -385,26 +393,6 @@ body {
                 // top: 300px;
             }
         }
-        // @media (max-height: 800px) {
-        //     min-height: calc(100vh + 300px);
-        //     &#classic02 {
-        //         .mainImage {
-        //             transform: translateY(var(--classicSmall));
-        //         }
-        //     }
-        //     &#seamless02 {
-        //         transform: translateY(var(--seamlessSmall));
-        //         .mainImage {
-        //             right: 10%;
-        //             width: 40%;
-        //         }
-        //     }
-        //     &#compact02 {
-        //         .mainImage {
-        //             transform: translateY(var(--compactSmall));
-        //         }
-        //     }
-        // }
         @media (max-height: 1085px) {
             min-height: calc(100vh + 300px);
             &#classic02 {
@@ -433,8 +421,8 @@ body {
                 }
             }
             &#seamless02 {
-                transform: translateY(var(--seamlessSmall));
                 .mainImage {
+                    transform: translateY(var(--seamlessSmall));
                     right: 10%;
                     width: 40%;
                 }
@@ -543,172 +531,61 @@ body {
 		// <!-- GALLERIES -->
         // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERIES -->
         .gallery {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
+            display: block;
 			margin-top: 170px;
-			margin-bottom: 500px;
+            margin-bottom: 200px;
+            h2 {
+                margin-bottom: 70px;
+            }
             img {
                 width: 100%;
             }
             .gallRow {
-                margin-top: 0;
-                p {
-                    margin-bottom: 40px;
-                }
-            }
-            .gall00 {
-                margin-bottom: 60px;
-                p {
-                    width: 66%;
-                }
-            }
-            .gall01 {
-                display: grid;
-                grid-template-columns: 66% 1fr;
-                grid-template-rows: 1fr;
-                grid-column-gap: 20px;
-                justify-content: center;
-				align-items: center;
-				margin-bottom: 200px;
-                img.rainy {
-                    justify-self: end;
-                    width: 86%;
-                    width: 100%; // margin-right: 20px;
-                    transform: translateY(var(--rainy));
-                    will-change: transform;
-                }
-            }
-            .gall02 img {
-                float: right;
-                width: 80%;
-            }
-            .gall05 {
-                position: relative; // margin-bottom: 300px;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr;
+                display: flex;
                 justify-content: center;
                 align-items: center;
-                img.nyc {
-                    justify-self: end;
-                    width: 86%;
+                width: 100%;
+                margin: 0 auto;
+            }
+            .gall01 {
+                margin-bottom: 140px;
+                img:first-child {
+                    margin-right: 10px;
                 }
-                img.stairs {
-                    position: absolute; // position: relative;
-                    top: 50px;
-                    left: 50px;
-                    width: 46%;
-                    transform: translateY(var(--stairs));
-                    will-change: transform;
+                img:last-child {
+                    margin-left: 10px;
                 }
-                p {
-                    clear: both;
+                img {
+                    width: 40%;
                 }
             }
-            .heatGall {
+            .gall02 {
                 position: relative;
-                .heatCopy {
+                justify-content: flex-end;
+                margin-bottom: 200px;
+                img:first-child {
                     position: absolute;
-                    top: 80px;
-                    right: 80px;
-                    width: 450px;
-                    font-family: $font-UQReg;
-                    font-size: 50px;
-                    color: #e66439;
-                    h2 {
-                        margin: 0;
-                        padding-bottom: 5px;
-                        font-size: 43px;
-                        color: #e66439;
-                        color: #2a5061;
-                    }
-                    p {
-                        margin-bottom: 20px;
-                        color: #2a5061;
-                    }
+                    left: 0;
+                    width: 45%;
+                }
+                img:last-child {
+                    z-index: 1;
+                    width: 57%;
                 }
             }
-            &.gallSeamless {
-                .gall01 {
-					margin-bottom: 70px;
+            .gall03 {
+                position: relative;
+                justify-content: flex-end;
+                margin-bottom: 200px;
+                img:first-child {
+                    position: absolute;
+                    top: -15%;
+                    left: 0;
+                    width: 57%;
                 }
-            }
-			&.gallCompact {
-				.gall01 {
-					grid-template-columns: 1fr 66%;
-					margin-bottom: 30px;
-                }
-				.gall02 {
-					display: grid;
-					grid-template-columns: 66% 1fr;
-					grid-column-gap: 20px;
-					img {
-						float: none;
-						width: 100%;
-					}
-					.imgSecondary {
-						margin-top: 15%;
-                    }
-                    .librarian {
-                        // padding-top: 60px;
-                    }
-                    video.gotham {
-                        width: 100%;
-                    }
-                }
-                .violin {
-                    width: 140%;
-                    transform: translateY(var(--violin));
-                    will-change: transform;
-                }
-                .morphosis {
-                    transform: translateY(var(--morphosis));
-                    will-change: transform;
-                }
-                .gotham {
-                    transform: translateY(var(--gotham));
-                    will-change: transform;
-                }
-			}
-			&.gallClassic {
-				.gall01 {
-					grid-template-columns: 1fr 66%;
-					margin-bottom: 70px;
-                }
-                .adam {
-                    padding-top: 220px;
-                }
-				.gall02 {
-					display: grid;
-					grid-template-columns: 66% 1fr;
-					grid-column-gap: 20px;
-					img {
-						float: none;
-						width: 100%;
-					}
-					.imgSecondary {
-						margin-top: 22%;
-					}
-                }
-                .oculus {
-                    transform: translateY(var(--oculus));
-                    will-change: transform;
-                }
-                .chinatown {
-                    transform: translateY(var(--chinatown));
-                    will-change: transform;
-                }
-            }
-            &.finalGallery {
-                margin-bottom: 100px;
-                h2 {
-                    text-align: left;
-                }
-                p {
-                    text-align: left;
-                }
-                .theCtas {
-                    margin-left: 0;
+                img:last-child {
+                    z-index: 1;
+                    width: 40%;
                 }
             }
         }
@@ -807,18 +684,24 @@ body {
     position: fixed;
     bottom: 20px;
     right: 28px;
-    height: 37px;
-    background: white;
-    border: 3px solid black;
     .zeroCTA {
-        border: none;
+        background: white;
+        border: 3px solid black;
+        transition: all 0.3s;
+        &:hover {
+            color: white;
+            background: black;
+            border-color: white;
+            transition: all 0.5s;
+            span {
+                color: white;
+                transition: all 0.3s;
+            }
+        }
     }
     span {
         color: black;
-    }
-    &:hover {
-        color: white;
-        background: black;
+        transition: all 0.3s;
     }
 }
 
