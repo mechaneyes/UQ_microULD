@@ -327,6 +327,29 @@ body {
             }
         }
     }
+
+
+
+    .heattech {
+        position: relative;
+        min-height: 100vh;
+        margin: 400px 0 100px;
+        img {
+            width: 100%;
+        }
+        .heatCopy {
+            position: absolute;
+            top: 17%;
+            right: 3%;
+            width: 48%;
+            p, h2 {
+                text-align: left;
+            }
+            .heatCta {
+                left: 0;
+            }
+        }
+    }
     
     
     // Fixed backgrounds - setting the element rel to position text
@@ -364,14 +387,14 @@ body {
             z-index: 1;
             position: absolute;
             top: 19%;
-            right: 2%;
+            right: 4%;
             will-change: transform;
         }
         .editorialImg {
             position: relative;
-            width: 60%;
+            width: 50%;
             top: 95px;
-            left: 2%;
+            left: 4%;
             padding-bottom: 40px;
         }
         &#classic02 {
@@ -606,6 +629,8 @@ body {
     }
     display: flex;
     justify-content: start;
+    position: relative;
+    bottom: -80px;
     height: 40px;
     // margin: 40px auto 40px 2%;
     margin-left: 2%;
@@ -652,6 +677,11 @@ body {
     .theCtas .zeroCTA {
         font-size: 14px;
     }
+}
+
+section .theCtas {
+    left: 4%;
+    margin-left: 0;
 }
 
 .family .theCtas {

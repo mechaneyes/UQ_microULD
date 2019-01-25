@@ -92,11 +92,6 @@ const whatIs = basicScroll.create({
 })
 
 
-
-
-
-
-
 const colors = basicScroll.create({
   elem: document.querySelector('.gradBack'),
   from: 'top-bottom',
