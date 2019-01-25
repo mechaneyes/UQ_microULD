@@ -295,32 +295,44 @@ const collecCompactLarge = basicScroll.create({
 
 
 
-// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY SEAMLESS -->
-// <!-- GALLERY SEAMLESS -->
-// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY SEAMLESS -->
-// const rainy = basicScroll.create({
-//   elem: document.querySelector('.rainy'),
-//   from: 'top-bottom',
-//   to: 'bottom-top',
-//   props: {
-//     '--rainy': {
-//       from: '210px',
-//       to: '-120px'
-//     }
-//   }
-// })
+// <!-- ————————————————————————————————————o————————————————————————————————————o SOCIAL GALLERY -->
+// <!-- SOCIAL GALLERY -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o SOCIAL GALLERY -->
+const gall01 = basicScroll.create({
+  elem: document.querySelector('.gall01 .floating'),
+  from: 'top-bottom',
+  to: 'bottom-top',
+  props: {
+    '--galOne': {
+      from: '80px',
+      to: '-120px'
+    }
+  }
+})
 
-// const stairs = basicScroll.create({
-//   elem: document.querySelector('img.stairs'),
-//   from: 'top-bottom',
-//   to: 'middle-top',
-//   props: {
-//     '--stairs': {
-//       from: '250px',
-//       to: '-150px'
-//     }
-//   }
-// })
+const gall02 = basicScroll.create({
+  elem: document.querySelector('.gall02 .floating'),
+  from: 'top-bottom',
+  to: 'middle-top',
+  props: {
+    '--galTwo': {
+      from: '120px',
+      to: '-150px'
+    }
+  }
+})
+
+const gall03 = basicScroll.create({
+  elem: document.querySelector('.gall03 .floating'),
+  from: 'top-bottom',
+  to: 'middle-top',
+  props: {
+    '--galThree': {
+      from: '150px',
+      to: '-150px'
+    }
+  }
+})
 
 
 

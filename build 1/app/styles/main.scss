@@ -550,10 +550,11 @@ body {
             .gall01 {
                 margin-bottom: 140px;
                 img:first-child {
-                    margin-right: 10px;
+                    margin-right: 15px;
+                    transform: translateY(var(--galOne));
                 }
                 img:last-child {
-                    margin-left: 10px;
+                    margin-left: 15px;
                 }
                 img {
                     width: 40%;
@@ -571,6 +572,7 @@ body {
                 img:last-child {
                     z-index: 1;
                     width: 57%;
+                    transform: translateY(var(--galTwo));
                 }
             }
             .gall03 {
@@ -586,6 +588,7 @@ body {
                 img:last-child {
                     z-index: 1;
                     width: 40%;
+                    transform: translateY(var(--galThree));
                 }
             }
         }
