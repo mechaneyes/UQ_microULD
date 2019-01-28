@@ -31,6 +31,11 @@ $(window).scroll(function () {
 
       // Add class of currently active div
       $body.addClass('color-' + $(this).data('color'));
+
+
+    //   $('.gradBack').fadeIn( "fast" );
+    // } else {
+    //   $('.gradBack').fadeOut("fast");
     }
   });
 
@@ -70,6 +75,29 @@ $(window).scroll(function () {
     $('.uldVideo').removeClass('fadeIn');
   }
 
+
+
+
+
+
+
+  // var theGradOffset = $('.gradBack').offset().top + 200;
+  // var gradDistance = (theGradOffset - top_of_screen);
+
+  // if (gradDistance < bottom_of_screen) {
+  //   // $('.gradBack').css('border', '1px solid white')
+  //   $('.gradBack').fadeIn( "fast" );
+  // }
+  // if (gradDistance > 200) {
+  //   $('.gradBack').fadeIn( "fast" );
+  //   // console.log('top_of_screen: ' + top_of_screen)
+  // } else {
+  //   $('.gradBack').hide();
+  // }
+
+  // console.log('gradDistance: ' + gradDistance)
+  // // console.log('theGradOffset: ' + theGradOffset)
+
 }).scroll();
 
 
@@ -92,17 +120,27 @@ const whatIs = basicScroll.create({
 })
 
 
-const colors = basicScroll.create({
-  elem: document.querySelector('.gradBack'),
-  from: 'top-bottom',
-  to: 'top-middle',
-  props: {
-    '--opacity': {
-      from: 0,
-      to: 1
-    }
-  }
-})
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLORS -->
+// <!-- COLORS -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLORS -->
+// const colors = basicScroll.create({
+//   elem: document.querySelector('.gradBack'),
+//   from: 'top-bottom',
+//   to: 'middle-middle',
+//   props: {
+//     '--opacity': {
+//       from: 0,
+//       to: 1
+//     }
+//   }
+// })
+
+
 
 
 
@@ -173,7 +211,7 @@ const collecClassicSmall = basicScroll.create({
   props: {
     '--classicSmall': {
       from: '260px',
-      to: '-580px'
+      to: '-100px'
     }
   }
 })
@@ -185,7 +223,7 @@ const collecSeamlessSmall = basicScroll.create({
   props: {
     '--seamlessSmall': {
       from: '260px',
-      to: '-590px'
+      to: '-70px'
     }
   }
 })
@@ -197,7 +235,7 @@ const collecCompactSmall = basicScroll.create({
   props: {
     '--compactSmall': {
       from: '260px',
-      to: '-200px'
+      to: '20px'
     }
   }
 })

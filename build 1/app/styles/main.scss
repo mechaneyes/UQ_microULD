@@ -127,6 +127,7 @@ body {
         grid-column-gap: 20px;
         .mainImage {
             width: 100%;
+            will-change: transform;
         }
         article.oneInfo {
             position: relative;
@@ -197,7 +198,7 @@ body {
             }
             img.whatIsImage {
                 transform: translateY(var(--whatIs));
-                will-change: transform;
+                // will-change: transform;
             }
         }
 
@@ -208,7 +209,7 @@ body {
             grid-column-gap: 70px;
             img.mainImage {
                 transform: translateY(var(--light));
-                will-change: transform;
+                // will-change: transform;
             }
         }
 
@@ -221,7 +222,7 @@ body {
                 justify-self: end;
                 width: 100%;
                 transform: translateY(var(--heat));
-                will-change: transform;
+                // will-change: transform;
             }
         }
 
@@ -231,7 +232,7 @@ body {
             grid-column-gap: 70px;
             img.mainImage {
                 transform: translateY(var(--rep));
-                will-change: transform;
+                // will-change: transform;
             }
         }
 
@@ -248,26 +249,15 @@ body {
             .sectionHeader {
                 position: relative;
             }
-            .gradient {
-                position: absolute;
-                // border: 1px solid white;
-                z-index: 5;
-                &.gradRight {
-                    right: 0;
-                }
-                &.gradLeft {
-                    left: 0;
-                    transform: scaleX(-1);
-                }
-            }
             .gradBack {
+                // display: none;
                 position: absolute;
                 bottom: 0;
                 width: 12%;
-                height: 85%;
+                height: 55%;
                 z-index: 6;
-                opacity: var(--opacity);
-                will-change: opacity;
+                // opacity: var(--opacity);
+                // will-change: opacity;
                 &.gradBackRight {
                     right: 0;
                     background-image: linear-gradient(to right, rgba(255,0,0,0), #164f32);
@@ -424,8 +414,8 @@ body {
                 }
             }
             &#seamless02 {
-                transform: translateY(var(--seamless1085));
                 .mainImage {
+                    transform: translateY(var(--seamless1085));
                     right: 10%;
                     width: 40%;
                 }
@@ -623,6 +613,32 @@ body {
 
 }
 
+
+
+// Gradients for Color section
+// 
+.gradBack {
+    opacity: 0;
+    transition: opacity 1.8s;
+}
+
+.color-dinaMagenta {
+    .gradBack {
+        opacity: 0;
+        transition: opacity 1.8s;
+    }
+}
+
+.color-dinaGreen {
+    .gradBack {
+        opacity: 1;
+        transition: opacity 1.8s;
+    }
+}
+
+
+
+
 .theCtas {
     * {
         box-sizing: border-box;
@@ -719,7 +735,7 @@ section .theCtas {
     right: 28px;
     .zeroCTA {
         background: white;
-        border: 3px solid black;
+        border: 3px solid white;
         transition: all 0.3s;
         &:hover {
             color: white;
