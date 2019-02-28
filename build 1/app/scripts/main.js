@@ -11,7 +11,7 @@ $(window).scroll(function () {
   var $window = $(window),
     $body = $('body'),
     // $body = $('#coloursScrl'),
-    $panel = $('section');
+    $panel = $('.colorChange');
 
   // Change 33% earlier than scroll position so colour is there when you arrive.
   var scroll = $window.scrollTop() + ($window.height() / 3);

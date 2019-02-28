@@ -63,6 +63,7 @@ body {
         text-transform: uppercase;
     }
     h2 {
+        margin: 0 0 10px;
         text-align: center;
         font-family: $font-UQReg;
         font-size: 60px;
@@ -660,9 +661,11 @@ body {
 }
 
 #coloursScrl .heatGall {
-    position: relative;
     min-height: 100vh;
     margin: 400px 0 100px;
+    .heatCont {
+        position: relative;
+    }
     img {
         width: 100%;
     }
