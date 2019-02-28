@@ -63,6 +63,7 @@ body {
         text-transform: uppercase;
     }
     h2 {
+        margin-bottom: 13px;
         text-align: center;
         font-family: $font-UQReg;
         font-size: 60px;
@@ -324,6 +325,9 @@ body {
         position: relative;
         min-height: 100vh;
         margin: 400px 0 100px;
+        .heatWrapper {
+            position: relative;
+        }
         img {
             width: 100%;
         }
@@ -732,6 +736,7 @@ section .theCtas {
     align-items: center;
     position: fixed;
     bottom: 20px;
+    left: auto !important;
     right: 28px;
     .zeroCTA {
         background: white;
@@ -805,9 +810,14 @@ section .theCtas {
 .siginup-logo,
 #footer,
 #globalsignup-dialog,
+.back-to-top,
 .back-to-top.show-back-top,
 .back-to-top.bottom-tuch {
     display: none !important;
+}
+
+.pt_primary #main {
+    padding: 0 !important;
 }
 
 body {

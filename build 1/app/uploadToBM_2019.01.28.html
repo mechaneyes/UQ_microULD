@@ -1,0 +1,2026 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
+<style>
+.color-dinaBlue {
+  background-color: #1c166b;
+}
+
+.color-dinaMagenta {
+  background-color: #8a4280;
+}
+
+.color-dinaGreen {
+  background-color: #164f32;
+}
+
+.color-healthOrange {
+  background-color: #F98B29;
+}
+
+.color-healthOrangeLight {
+  background-color: #FF9B43;
+}
+
+.color-healthOrangeDark {
+  background-color: #AC580E;
+}
+
+.color-healthBlue {
+  background-color: #00BBE5;
+}
+
+.color-healthBlueLight {
+  background-color: #29D3F9;
+}
+
+.color-healthBlueDark {
+  background-color: #008eaf;
+}
+
+.color-uldBlue {
+  background-color: #2C3B7C;
+}
+
+.color-uldBlueLighter {
+  background-color: #3047A8;
+}
+
+.color-uldBlueDarker {
+  background-color: #1A234A;
+}
+
+.color-uldBlueMagent {
+  background-color: #5B70C8;
+}
+
+.color-uldContYellow {
+  background-color: #FFCF41;
+}
+
+.color-uldContGold {
+  background-color: #C89E1F;
+}
+
+.color-monBlue01 {
+  background-color: #31a0e4;
+}
+
+.color-monBlue02 {
+  background-color: #008DE5;
+}
+
+.color-monBlue03 {
+  background-color: #006EB2;
+}
+
+.color-monBlue04 {
+  background-color: #0971B2;
+}
+
+.color-monBlue05 {
+  background-color: #00558a;
+}
+
+.color-monOrange01 {
+  background-color: #FF9F19;
+}
+
+.color-monOrange02 {
+  background-color: #FF9508;
+  background-color: #DE8816;
+}
+
+.color-heat {
+  background-color: #f3913b;
+}
+
+.color-gallery {
+  background-color: #4DCF42;
+  background-color: #ee720e;
+}
+
+.color-limey {
+  background-color: #b6e600;
+}
+
+.color-pistacio {
+  background-color: #a8e4a6;
+}
+
+.color-silver {
+  background-color: #b7b7b7;
+}
+
+.color-lightweight {
+  background-color: #c6ce67;
+}
+
+.color-lightweightGreen {
+  background-color: #74B891;
+}
+
+.color-lightweightGreenDarker {
+  background-color: #47A46E;
+}
+
+.color-lightweightGreenDarker {
+  background-color: #47A46E;
+}
+
+.color-darkerOrange {
+  background-color: #eab968;
+}
+
+.color-cyan {
+  background-color: #29D3F9;
+}
+
+.color-darkerCyan {
+  background-color: #00BBE5;
+}
+
+.color-violet {
+  background-color: #7A4EAB;
+}
+
+.color-indigo {
+  background-color: #4332CF;
+}
+
+.color-blue {
+  background-color: #4CA6FF;
+}
+
+.color-darkerBlue {
+  background-color: #2F8FED;
+}
+
+.color-darkestBlue {
+  background-color: #1059A0;
+}
+
+.color-darkestBlue {
+  background-color: #0971B2;
+}
+
+.color-orange {
+  background-color: #e1382d;
+  background-color: #EDA62F;
+}
+
+.color-yellow {
+  background-color: #FAEB33;
+}
+
+.color-heattech {
+  background-color: #561f92;
+}
+
+.color-red {
+  background-color: #F2293A;
+}
+
+.color-black {
+  background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 1s ease;
+}
+
+#main {
+  transition: background-color 1s ease;
+}
+
+#wrapper {
+  background-color: transparent;
+}
+
+.back-to-top.show-back-top {
+  display: none;
+}
+
+.pt_primary #main .primary-content #coloursScrl {
+  max-width: 1222px;
+  margin: 0 auto;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  transition: background-color 1s ease;
+}
+
+.pt_primary #main .primary-content #coloursScrl * {
+  box-sizing: border-box;
+}
+
+.pt_primary #main .primary-content #coloursScrl img {
+  max-width: none;
+  max-height: none;
+}
+
+.pt_primary #main .primary-content #coloursScrl h1 {
+  margin-bottom: 20px;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  color: red;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.pt_primary #main .primary-content #coloursScrl h2 {
+  margin-bottom: 13px;
+  text-align: center;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  color: white;
+  letter-spacing: 7px;
+  border-bottom: none;
+}
+
+.pt_primary #main .primary-content #coloursScrl h3 {
+  margin: 10px auto 0;
+}
+
+.pt_primary #main .primary-content #coloursScrl p {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.pt_primary #main .primary-content #coloursScrl .icon {
+  margin-bottom: -2px;
+  padding-left: 5px;
+  font-size: 22px;
+  color: white;
+  transition: all 0.3s;
+}
+
+.pt_primary #main .primary-content #coloursScrl .subhead {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.pt_primary #main .primary-content #coloursScrl .flipped {
+  transform: scaleX(-1);
+}
+
+.pt_primary #main .primary-content #coloursScrl .collecItem {
+  margin-bottom: 10px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .collecItem img {
+  width: 90%;
+  margin: 0;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.pt_primary #main .primary-content #coloursScrl .collecItem img.thumb {
+  width: 120px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .collecItem p {
+  padding: 10px 0;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel {
+  -ms-flex-align: center;
+      align-items: center;
+  min-height: 100vh;
+  margin: 100px 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 0.6px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 1fr;
+      grid-template-columns: 45% 1fr;
+  grid-column-gap: 20px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel .mainImage {
+  width: 100%;
+  will-change: transform;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel article.oneInfo {
+  position: relative;
+  margin-bottom: 50px;
+  color: white;
+  text-align: center;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel article.oneInfo img.featureImg {
+  float: none;
+  width: 140px;
+  height: 140px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel article.oneInfo h2 {
+  margin: 40px 0;
+  text-transform: uppercase;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.uldIntro {
+  -ms-grid-columns: 80% 1fr;
+      grid-template-columns: 80% 1fr;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.uldIntro h1 {
+  margin-top: 30px;
+  font-size: 80px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.uldIntro .sticky {
+  padding-left: 27px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.uldIntro .ticker {
+  height: 90px;
+  padding: 8px 0 8px 25px;
+  border: 4px solid red;
+  overflow: hidden;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.uldIntro .ticker .tick {
+  display: none;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 80px;
+  color: red;
+  text-transform: uppercase;
+  line-height: normal;
+  text-align: left;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.uldIntro .ticker .slick-slide.tick {
+  display: inline-block;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.whatIs {
+  grid-column-gap: 20px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.whatIs .info {
+  margin-right: 40px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.whatIs img.uldLogo {
+  float: none;
+  width: 200px;
+  margin: 10px 0 20px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.whatIs img.whatIsImage {
+  transform: translateY(var(--whatIs));
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.lightweight {
+  -ms-grid-columns: 1fr 41%;
+      grid-template-columns: 1fr 41%;
+  grid-column-gap: 70px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.lightweight img.mainImage {
+  transform: translateY(var(--light));
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.heatRetention {
+  -ms-grid-columns: 43% 50%;
+      grid-template-columns: 43% 50%;
+  grid-column-gap: 70px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.heatRetention img.mainImage {
+  justify-self: end;
+  width: 100%;
+  transform: translateY(var(--heat));
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.repellent {
+  grid-column-gap: 70px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.repellent img.mainImage {
+  transform: translateY(var(--rep));
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.colors {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  margin: 300px 0;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.colors .mainImage {
+  display: block;
+  width: 80%;
+  margin: 30px auto 0px 0;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.colors .sectionHeader {
+  position: relative;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.colors .gradBack {
+  position: absolute;
+  bottom: 0;
+  width: 12%;
+  height: 55%;
+  z-index: 6;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.colors .gradBack.gradBackRight {
+  right: 0;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #164f32);
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.colors .gradBack.gradBackLeft {
+  left: 0;
+  background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #164f32);
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.colors .colorTicker {
+  width: 100%;
+  max-width: 1222px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.colors .colorTicker .slick-slide {
+  margin-right: 6px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.howMade {
+  height: 1px;
+  min-height: 1px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.family {
+  -ms-grid-columns: 45% 1fr;
+      grid-template-columns: 45% 1fr;
+  grid-column-gap: 70px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.family .oneInfo {
+  color: #ff9349;
+  color: white;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.family .paraJacket {
+  transform: translateY(var(--field));
+  will-change: transform;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.family .stackedImages {
+  position: relative;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.family .stackedImages .mainImage:first-child {
+  width: 400px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.family .stackedImages .mainImage:nth-child(2) {
+  position: absolute;
+  top: 130px;
+  left: 0px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .panel.family .stackedImages .mainImage:nth-child(3) {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  width: 300px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .heattech {
+  position: relative;
+  min-height: 100vh;
+  margin: 400px 0 100px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .heattech .heatWrapper {
+  position: relative;
+}
+
+.pt_primary #main .primary-content #coloursScrl .heattech img {
+  width: 100%;
+}
+
+.pt_primary #main .primary-content #coloursScrl .heattech .heatCopy {
+  position: absolute;
+  top: 17%;
+  right: 3%;
+  width: 48%;
+}
+
+.pt_primary #main .primary-content #coloursScrl .heattech .heatCopy p, .pt_primary #main .primary-content #coloursScrl .heattech .heatCopy h2 {
+  text-align: left;
+}
+
+.pt_primary #main .primary-content #coloursScrl .heattech .heatCopy .heatCta {
+  left: 0;
+}
+
+.pt_primary #main .primary-content #coloursScrl .production {
+  position: relative;
+}
+
+.pt_primary #main .primary-content #coloursScrl .collection02 {
+  overflow: hidden;
+  position: relative;
+  -ms-flex-align: center;
+      align-items: center;
+  min-height: 100vh;
+  padding: 100px 0;
+  color: white;
+  text-align: left;
+}
+
+.pt_primary #main .primary-content #coloursScrl .collection02 .collecItem {
+  position: relative;
+  width: 222px;
+  z-index: 2;
+  float: right;
+  top: 30px;
+  right: 1%;
+}
+
+.pt_primary #main .primary-content #coloursScrl .collection02 .mainImage {
+  z-index: 1;
+  position: absolute;
+  top: 19%;
+  right: 4%;
+  will-change: transform;
+}
+
+.pt_primary #main .primary-content #coloursScrl .collection02 .editorialImg {
+  position: relative;
+  width: 50%;
+  top: 95px;
+  left: 4%;
+  padding-bottom: 40px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .collection02#classic02 .mainImage {
+  width: 58%;
+  transform: translateY(var(--classicLarge));
+}
+
+.pt_primary #main .primary-content #coloursScrl .collection02#seamless02 .mainImage {
+  transform: translateY(var(--seamlessLarge));
+}
+
+.pt_primary #main .primary-content #coloursScrl .collection02#compact02 .mainImage {
+  transform: translateY(var(--compactLarge));
+}
+
+@media (max-height: 1085px) {
+  .pt_primary #main .primary-content #coloursScrl .collection02 {
+    min-height: calc(100vh + 300px);
+  }
+  .pt_primary #main .primary-content #coloursScrl .collection02#classic02 .mainImage {
+    transform: translateY(var(--classic1085));
+  }
+  .pt_primary #main .primary-content #coloursScrl .collection02#seamless02 .mainImage {
+    transform: translateY(var(--seamless1085));
+    right: 10%;
+    width: 40%;
+  }
+  .pt_primary #main .primary-content #coloursScrl .collection02#compact02 .mainImage {
+    transform: translateY(var(--compact1085));
+  }
+}
+
+@media (max-height: 800px) {
+  .pt_primary #main .primary-content #coloursScrl .collection02 {
+    min-height: calc(100vh + 300px);
+  }
+  .pt_primary #main .primary-content #coloursScrl .collection02#classic02 .mainImage {
+    transform: translateY(var(--classicSmall));
+  }
+  .pt_primary #main .primary-content #coloursScrl .collection02#seamless02 .mainImage {
+    transform: translateY(var(--seamlessSmall));
+    right: 10%;
+    width: 40%;
+  }
+  .pt_primary #main .primary-content #coloursScrl .collection02#compact02 .mainImage {
+    transform: translateY(var(--compactSmall));
+  }
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: calc(100vh - 200px);
+      grid-template-rows: calc(100vh - 200px);
+  margin: 200px auto;
+  margin: 3px auto;
+  -ms-flex-align: end;
+      align-items: end;
+  height: calc(100vh - 200px);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack p {
+  bottom: 0;
+  width: 30%;
+  margin-left: 30px;
+  font-size: 26px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack00 {
+  background-image: url("http://uniqlo.scene7.com/is/image/UNIQLO/uldBackThreads?$jpgMQ$");
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack01 {
+  background-image: url("http://uniqlo.scene7.com/is/image/UNIQLO/uldBackLoom01?$jpgMQ$");
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack02 {
+  background-image: url("http://uniqlo.scene7.com/is/image/UNIQLO/uldBackLoom02?$jpgMQ$");
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack03 {
+  background-image: url("http://uniqlo.scene7.com/is/image/UNIQLO/uldBackPremiumDown?$jpgMQ$");
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack04 {
+  background-image: url("http://uniqlo.scene7.com/is/image/UNIQLO/uldBackTweezers?$jpgMQ$");
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack05 {
+  background-image: url("http://uniqlo.scene7.com/is/image/UNIQLO/uldBackCollar?$jpgMQ$");
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack06 {
+  background-image: url("http://uniqlo.scene7.com/is/image/UNIQLO/uldBackImageTransfer?$jpgMQ$");
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack07 {
+  background-image: url("http://uniqlo.scene7.com/is/image/UNIQLO/uldBackPouch?$jpgMQ$");
+}
+
+.pt_primary #main .primary-content #coloursScrl .paraBack08 {
+  background-image: url("http://uniqlo.scene7.com/is/image/UNIQLO/uldBackCustomer?$jpgMQ$");
+}
+
+.pt_primary #main .primary-content #coloursScrl .microFibers {
+  -ms-grid-columns: 1fr 59%;
+      grid-template-columns: 1fr 59%;
+  grid-column-gap: 30px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .microFibers .info {
+  margin-right: 40px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .microFibers img {
+  transform: translateY(var(--fibers));
+  will-change: transform;
+}
+
+.pt_primary #main .primary-content #coloursScrl .packable {
+  -ms-grid-columns: 1fr 59%;
+      grid-template-columns: 1fr 59%;
+  grid-column-gap: 30px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .packable .info {
+  margin-right: 40px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .packable img {
+  transform: translateY(var(--packable));
+  will-change: transform;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery {
+  display: block;
+  margin-top: 170px;
+  margin-bottom: 200px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery h2 {
+  margin-bottom: 70px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery img {
+  width: 100%;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gallRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gall01 {
+  margin-bottom: 140px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gall01 img:first-child {
+  margin-right: 15px;
+  transform: translateY(var(--galOne));
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gall01 img:last-child {
+  margin-left: 15px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gall01 img {
+  width: 40%;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gall02 {
+  position: relative;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-bottom: 200px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gall02 img:first-child {
+  position: absolute;
+  left: 0;
+  width: 45%;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gall02 img:last-child {
+  z-index: 1;
+  width: 57%;
+  transform: translateY(var(--galTwo));
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gall03 {
+  position: relative;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-bottom: 200px;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gall03 img:first-child {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 57%;
+}
+
+.pt_primary #main .primary-content #coloursScrl .gallery .gall03 img:last-child {
+  z-index: 1;
+  width: 40%;
+  transform: translateY(var(--galThree));
+}
+
+.gradBack {
+  opacity: 0;
+  transition: opacity 1.8s;
+}
+
+.color-dinaMagenta .gradBack {
+  opacity: 0;
+  transition: opacity 1.8s;
+}
+
+.color-dinaGreen .gradBack {
+  opacity: 1;
+  transition: opacity 1.8s;
+}
+
+.theCtas {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: start;
+  position: relative;
+  bottom: -80px;
+  height: 40px;
+  margin-left: 2%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.theCtas * {
+  box-sizing: border-box;
+}
+
+.theCtas .zeroCTA {
+  float: left;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 40px;
+  width: auto;
+  min-width: 150px;
+  padding-top: 0;
+  margin: 0;
+  font-family: UniqloProBold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.1vw;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 3px solid white;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.theCtas .zeroCTA:first-child {
+  margin-right: 15px;
+}
+
+.theCtas .zeroCTA:hover {
+  background: white;
+  transition: all 0.3s;
+}
+
+.theCtas .zeroCTA:hover span {
+  color: black;
+}
+
+.theCtas a {
+  color: black;
+}
+
+@media (min-width: 1281px) {
+  .theCtas .zeroCTA {
+    font-size: 14px;
+  }
+}
+
+section .theCtas {
+  left: 4%;
+  margin-left: 0;
+}
+
+.family .theCtas {
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-top: 30px;
+}
+
+.heatCta {
+  display: block;
+  position: relative;
+  top: 0;
+  right: auto;
+  left: 0;
+  margin-top: 20px;
+}
+
+.heatCta .zeroCTA {
+  color: #2a5061;
+  border-color: #2a5061;
+  background: transparent;
+}
+
+.heatCta .zeroCTA span {
+  color: #2a5061;
+}
+
+.heatCta .zeroCTA:hover {
+  background: #2a5061;
+}
+
+.heatCta .zeroCTA:hover span {
+  color: white;
+}
+
+.persistent {
+  -ms-flex-align: center;
+      align-items: center;
+  position: fixed;
+  bottom: 20px;
+  left: auto !important;
+  right: 28px;
+}
+
+.persistent .zeroCTA {
+  background: white;
+  border: 3px solid white;
+  transition: all 0.3s;
+}
+
+.persistent .zeroCTA:hover {
+  color: white;
+  background: black;
+  border-color: white;
+  transition: all 0.5s;
+}
+
+.persistent .zeroCTA:hover span {
+  color: white;
+  transition: all 0.3s;
+}
+
+.persistent span {
+  color: black;
+  transition: all 0.3s;
+}
+
+.uldVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.fadeIn {
+  animation: fade-in 0.6s ease-in forwards;
+}
+
+.fadeOut {
+  animation: fade-out 0.7s ease-in forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.slick-list {
+  top: -13px;
+}
+
+.header-wrapper .promo-container,
+.header-wrapper .header-border,
+.header-wrapper .top-banner,
+.header-wrapper .header-banner,
+.siginup-logo,
+#footer,
+#globalsignup-dialog,
+.back-to-top,
+.back-to-top.show-back-top,
+.back-to-top.bottom-tuch {
+  display: none !important;
+}
+
+.pt_primary #main {
+  padding: 0 !important;
+}
+
+body {
+  margin: 0;
+}
+
+.uldVideo {
+  z-index: auto;
+}
+</style>
+
+
+
+
+
+
+
+
+
+<video class="uldVideo" class="video-js" preload="auto" height="auto" muted autoplay loop>
+    <source src="//uniqlo.scene7.com/e2/UNIQLO/us_site_assets/video_assets/2018/09_uld/uld18fw.mp4" type='video/mp4'>
+</video>
+<div class="theCtas persistent">
+    <a href="#" class="zeroCTA"><span>SEE THE LINEUP</span></a>
+</div>
+
+
+
+
+<div id="coloursScrl">
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		<!-- ————————————————————————————————————o————————————————————————————————————o INTRO VIDEO -->
+		<!-- INTRO VIDEO -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o INTRO VIDEO -->
+		<section class="colorChange panel uldIntro" data-color="black">
+			<div>
+				<h1 class="sticky">Ultra</h1>
+				<div class="ticker">
+					<p class="tick">Versatile Inner</p>
+					<p class="tick">Stylish Outer</p>
+					<p class="tick">Business Chic</p>
+					<p class="tick">Me Time</p>
+					<p class="tick">Travel Partner</p>
+					<p class="tick">Just Like a Cardigan</p>
+					<p class="tick">Cherish the Moment</p>
+					<p class="tick">Look the Part</p>
+					<p class="tick">Keeps You Active</p>
+				</div>
+				<h1 class="sticky">Down</h1>
+			</div>
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		<!-- ————————————————————————————————————o————————————————————————————————————o INTRO - WHAT IS? -->
+		<!-- INTRO - WHAT IS? -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o INTRO - WHAT IS? -->
+		<!-- <section class="panel whatIs" data-color="monBlue04"> -->
+		<section class="colorChange panel whatIs" data-color="uldBlue">
+			<div class="info">
+				<article class="oneInfo sectionHeader">
+					<h2>What is<br />Ultra Light Down?</h2>
+					<img class="uldLogo" src="//uniqlo.scene7.com/is/image/UNIQLO/uld_logo_white?$png$&wid=200" />
+					<p>We combine proprietary technology with premium down with excellent insulation to create outerwear that’s extremely warm and extremely lightweight. Each piece is also water-repellent and includes a carrying case for added portability.</p>
+				</article>
+			</div>
+			<img class="mainImage whatIsImage" src="//uniqlo.scene7.com/is/image/UNIQLO/mainJacketWhiteFlipped?$gif$" />
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		<!-- ————————————————————————————————————o————————————————————————————————————o LIGHTWEIGHT -->
+		<!-- LIGHTWEIGHT -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o LIGHTWEIGHT -->
+		<!-- uldBlueMagent -->
+		<section class="colorChange panel lightweight" data-color="dinaGreen">
+			<img class="mainImage lightImage" src="//uniqlo.scene7.com/is/image/UNIQLO/mainJacketPinkish?$png$" />
+			<div class="info">
+				<article class="oneInfo sectionHeader">
+					<img class="featureImg" src="//uniqlo.scene7.com/is/image/UNIQLO/detailDownSquare?$jpgMQ$" />
+					<h2>Lightweight</h2>
+					<p>PlumaFill synthetic insulation and a patent-pending construction technique create an ultralight jacket with the best warmth for weight we’ve ever achieved—down or synthetic.</p>
+				</article>
+			</div>
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		<!-- ————————————————————————————————————o————————————————————————————————————o HEAT -->
+		<!-- HEAT -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o HEAT -->
+		<!-- uldBlueLighter -->
+		<section class="colorChange panel heatRetention" data-color="dinaMagenta">
+			<div class="info">
+				<article class="oneInfo sectionHeader">
+					<img class="featureImg" src="//uniqlo.scene7.com/is/image/UNIQLO/detailDownExposed_square?$jpgMQ$" />
+					<h2>Heat Retention</h2>
+					<p>Premium down keeps warmth from escaping without adding too much in the way of volume.</p>
+				</article>
+			</div>
+			<img class="mainImage heatImage" src="//uniqlo.scene7.com/is/image/UNIQLO/mainJacketDark?$png$" />
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		<!-- ————————————————————————————————————o————————————————————————————————————o WATER REPELLENT -->
+		<!-- WATER REPELLENT -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o WATER REPELLENT -->
+		<!-- uldBlue -->
+		<section class="colorChange panel repellent" data-color="dinaBlue">
+			<img class="mainImage repImage" src="//uniqlo.scene7.com/is/image/UNIQLO/mainSilverSurfer?$png$" />
+			<div class="info">
+				<article class="oneInfo sectionHeader">
+					<img class="featureImg" src="//uniqlo.scene7.com/is/image/UNIQLO/detailWaterproof02?$jpgMQ$" />
+					<h2>Durable Water Repellency</h2>
+					<p>A special finish means that our Ultra Light Down outerwear stands up to light rain and snow.</p>
+				</article>
+			</div>
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		<!-- ————————————————————————————————————o————————————————————————————————————o COLOR VARIATIONS -->
+		<!-- COLOR VARIATIONS -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o COLOR VARIATIONS -->
+		<!-- <section class="panel colors" data-color="monBlue04"> -->
+		<section class="colorChange panel colors" data-color="dinaGreen">
+			<div class="info">
+				<article class="sectionHeader">
+					<h2>A RAINBOW OF COLORS</h2>
+					<p style="margin-bottom: 95px;">Get one to match your every mood.</p>
+					<!-- <img class="mainImage" src="//uniqlo.scene7.com/is/image/UNIQLO/colorVariations?$png$" /> -->
+					<!-- <img class="gradient gradRight" src="images/uldGrad.png" /> -->
+					<div class='gradBack gradBackLeft'>&nbsp;</div>
+					<div class='gradBack gradBackRight'>&nbsp;</div>
+					<div class="colorTicker colorRotator">
+						<img class="mainImage" src="//uniqlo.scene7.com/is/image/UNIQLO/colorsOneRow?$png$" />
+						<img class="mainImage" src="//uniqlo.scene7.com/is/image/UNIQLO/colorsOneRow?$png$" />
+					</div>
+					<!-- <div class="colorTicker colorRotBack">
+						<img class="mainImage" src="//uniqlo.scene7.com/is/image/UNIQLO/colorsOneRow?$png$" />
+						<img class="mainImage" src="//uniqlo.scene7.com/is/image/UNIQLO/colorsOneRow?$png$" />
+					</div>
+					<div class="colorTicker colorRotaFasta">
+						<img class="mainImage" src="//uniqlo.scene7.com/is/image/UNIQLO/colorsOneRow?$png$" />
+						<img class="mainImage" src="//uniqlo.scene7.com/is/image/UNIQLO/colorsOneRow?$png$" />
+					</div> -->
+				</article>
+			</div>
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		<!-- ————————————————————————————————————o————————————————————————————————————o CLASSIC v2 -->
+		<!-- COLLECTION CLASSIC v2 -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o CLASSIC v2 -->
+		<section id="classic02" class="colorChange collection02" data-color="dinaMagenta">
+			<h2>Ultra Light Down Classic</h2>
+			<p class="subhead">The lightweight must-have jacket for every wardrobe.</p>
+			<img class="mainImage" src="//uniqlo.scene7.com/is/image/UNIQLO/mainClassic?$png$" />
+			<img class="editorialImg" src="//uniqlo.scene7.com/is/image/UNIQLO/uldMicro_classic?$jpgMQ$" />
+			<div class="theCtas">
+				<a href="#" class="zeroCTA"><span>shop women</span></a>
+				<a href="#" class="zeroCTA"><span>shop men</span></a>
+			</div>
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		<!-- ————————————————————————————————————o————————————————————————————————————o SEAMLESS v2 -->
+		<!-- COLLECTION SEAMLESS v2 -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o SEAMLESS v2 -->
+		<section id="seamless02" class="colorChange collection02" data-color="dinaBlue">
+			<h2>Ultra Light Down Seamless</h2>
+			<p class="subhead">No seams mean no wind or rain gets into your coat.</p>
+			<img class="mainImage" src="//uniqlo.scene7.com/is/image/UNIQLO/uldSeamlessJacketFlipped?$png$&wid=550" />
+			<img class="editorialImg" style="left:10%;" src="//uniqlo.scene7.com/is/image/UNIQLO/uldMicro_seamless?$jpgMQ$" />
+			<div class="theCtas" style="left:10%;">
+				<a href="#" class="zeroCTA"><span>shop women</span></a>
+				<a href="#" class="zeroCTA"><span>shop men</span></a>
+			</div>
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		<!-- ————————————————————————————————————o————————————————————————————————————o COMPACT v2 -->
+		<!-- COLLECTION COMPACT v2 -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o COMPACT v2 -->
+		<section id="compact02" class="colorChange collection02" data-color="dinaGreen">
+			<h2>Ultra Light Down Compact</h2>
+			<p class="subhead">A two-way design means you can layer this jacket under any outerwear.</p>
+			<img class="mainImage" src="//uniqlo.scene7.com/is/image/UNIQLO/mainVneck?$png$&wid=590" />
+			<img class="editorialImg" src="//uniqlo.scene7.com/is/image/UNIQLO/uldMicro_compact?$jpgMQ$" />
+			<div class="theCtas">
+				<a href="#" class="zeroCTA"><span>shop women</span></a>
+				<a href="#" class="zeroCTA"><span>shop men</span></a>
+			</div>
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		<!-- ————————————————————————————————————o————————————————————————————————————o HOW U WEAR IT -->
+		<!-- HOW U WEAR IT -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o HOW U WEAR IT -->
+		<section class="colorChange panel gallery" data-color="dinaMagenta">
+			<h2>How U wear It</h2>
+			<div class="gallRow gall01">
+				<img class="floating" src="//uniqlo.scene7.com/is/image/UNIQLO/howUwearIt_027?$jpgMQ$" />
+				<img src="//uniqlo.scene7.com/is/image/UNIQLO/howUwearIt_003?$jpgMQ$" />
+			</div>
+			<div class="gallRow gall02">
+				<img src="//uniqlo.scene7.com/is/image/UNIQLO/howUwearIt_014?$jpgMQ$" />
+				<img class="floating" src="//uniqlo.scene7.com/is/image/UNIQLO/howUwearIt_005?$jpgMQ$" />
+			</div>
+			<div class="gallRow gall03">
+				<img src="//uniqlo.scene7.com/is/image/UNIQLO/howUwearIt_020?$jpgMQ$" />
+				<img class="floating" src="//uniqlo.scene7.com/is/image/UNIQLO/howUwearIt_023?$jpgMQ$" />
+			</div>
+		</section>
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		<!-- ————————————————————————————————————o————————————————————————————————————o BEHIND THE SCENES -->
+		<!-- BEHIND THE SCENES -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o BEHIND THE SCENES -->
+		<section class="colorChange panel howMade" data-color="dinaBlue"></section>
+		<article class="colorChange panel paraBack paraBack01" data-color="dinaBlue"></article>
+		<article class="colorChange panel paraBack paraBack00" data-color="dinaBlue"></article>
+		<!-- <article class="panel paraBack paraBack02" data-color="monBlue03"></article> -->
+		<article class="colorChange panel paraBack paraBack03" data-color="dinaBlue"></article>
+		<article class="colorChange panel paraBack paraBack04" data-color="dinaBlue"></article>
+		<!-- <article class="panel paraBack paraBack05" data-color="monBlue03"></article> -->
+		<!-- <article class="panel paraBack paraBack06" data-color="monBlue03"></article> -->
+		<!-- <article class="panel paraBack paraBack07" data-color="monBlue03"></article> -->
+		<!-- <article class="panel paraBack paraBack08" data-color="monBlue03"></article> -->
+		<section class="colorChange panel howMade" data-color="dinaBlue"></section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<!-- ————————————————————————————————————o————————————————————————————————————o FAMILY -->
+		<!-- FAMILY -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o FAMILY -->
+		<section class="colorChange panel largerImage family" data-color="dinaGreen">
+			<div class="stackedImages">
+				<img class="mainImage paraJacket" src="//uniqlo.scene7.com/is/image/UNIQLO/mainSleepingBag?$png$" />
+				<img class="mainImage paraJacket" src="//uniqlo.scene7.com/is/image/UNIQLO/mainJacketWhite?$png$" />
+				<img class="mainImage paraJacket" src="//uniqlo.scene7.com/is/image/UNIQLO/mainVestBlue?$png$" />
+			</div>
+			<div class="info">
+				<article class="oneInfo sectionHeader">
+					<h2>Ultra Light Down FOR THE WHOLE FAMILY</h2>
+					<p>With a variety of colors and styles, you’re sure to find something for every closet.</p>
+					<div class="theCtas">
+						<a href="#" class="zeroCTA" style="margin-right:15px;"><span>shop women</span></a>
+						<a href="#" class="zeroCTA" style="margin-right:15px;"><span>shop men</span></a>
+						<a href="#" class="zeroCTA"><span>shop kids</span></a>
+					</div>
+				</article>
+			</div>
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<!-- ————————————————————————————————————o————————————————————————————————————o HEATTECH -->
+		<!-- HEATTECH -->
+		<!-- ————————————————————————————————————o————————————————————————————————————o HEATTECH -->
+		<section class="colorChange heattech" data-color="dinaBlue">
+			<div class="heatWrapper">
+				<img class="" src="//uniqlo.scene7.com/is/image/UNIQLO/uldGalleryHeattech?$jpgMQ$" />
+				<div class="heatCopy">
+					<h2>Need More Heat?</h2>
+					<p>Enter HEATTECH, a groundbreaking fabric that absorbs the moisture from your body and generates it into heat. Just wearing it automatically warms you — a surprising innovation in technology-friendly clothing.</p>
+					<div class="theCtas heatCta">
+						<a href="#" class="zeroCTA" style="padding:0 10px;"><span>SEE THE COLLECTION</span></a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/basicscroll@2.1.1/dist/basicScroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="//unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+
+
+
+
+<script>
+
+
+        $('link[rel=stylesheet][href~="http://staging-na-uniqlo.demandware.net/on/demandware.static/Sites-UniqloUS-Site/-/default/v1536240217877/css/allinone.css"]').remove();
+    
+    
+        $(function() {
+    
+    
+            // <!-- ————————————————————————————————————o CAROUSELS -->
+            // <!-- These functions live in main.js -->
+            $('.ticker').slick({
+                vertical: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                speed: 180,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                arrows: false
+            });
+            
+            $('.colorRotator').slick({
+                speed: 14000,
+                autoplay: true,
+                autoplaySpeed: 0,
+                cssEase: 'linear',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+            });
+    
+            $('.colorRotaFasta').slick({
+                speed: 9000,
+                autoplay: true,
+                autoplaySpeed: 0,
+                cssEase: 'linear',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+            });
+    
+    
+            // <!-- ————————————————————————————————————o CAROUSEL REVERSED -->
+            // <!-- Had to build this custo setup to reverse the order of carousel -->
+    
+            var autoplaySpeed = 2000;
+            var autoplayOn = true;
+    
+            var $slickRoot = $('.colorRotBack');
+    
+            $slickRoot.on('init', function() {
+                var $slickList = $slickRoot.find('.slick-list');
+    
+                $slickList.mouseenter(function() {
+                    autoplayOn = false;
+                });
+                $slickList.mouseleave(function() {
+                    autoplayOn = true;
+                });
+    
+                window.setInterval(function() {
+                    if (!autoplayOn) return;
+                    $slickRoot.slick('slickPrev');
+                }, autoplaySpeed);
+            });
+    
+            $slickRoot.slick({
+                infinite: true,
+                autoplay: false,
+                autoplaySpeed: 0,
+                speed: 14000,
+                // autoplaySpeed: 1000,
+                cssEase: 'linear',
+                arrows: false
+            });
+        })
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        // <!-- ————————————————————————————————————o INITIALIZE PARALLAX ELEMENTS -->
+        // <!-- These functions live in main.js -->
+        setTimeout(function() {
+            whatIs.start()
+            // colors.start()
+            repellent.start()
+            lightweight.start()
+            heatRetention.start()
+    
+            collecClassicSmall.start()
+            collecSeamlessSmall.start()
+            collecCompactSmall.start()
+    
+            collecClassic1085.start()
+            collecSeamless1085.start()
+            collecCompact1085.start()
+    
+            collecClassicLarge.start()
+            collecSeamlessLarge.start()
+            collecCompactLarge.start()
+    
+            gall01.start()
+            gall02.start()
+            gall03.start()
+        }, 2000)
+
+
+
+
+
+
+
+
+
+        $(window).scroll(function () {
+
+  
+  
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLOR CHANGE -->
+// <!-- COLOR CHANGE ON SCROLL -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLOR CHANGE -->
+var $window = $(window),
+  $body = $('body'),
+  $panel = $('.colorChange');
+
+// Change 33% earlier than scroll position so colour is there when you arrive.
+var scroll = $window.scrollTop() + ($window.height() / 3);
+
+$panel.each(function () {
+  var $this = $(this);
+
+  // if position is within range of this panel.
+  // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
+  // Remember we set the scroll to 33% earlier in scroll var.
+  if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+
+    // Remove all classes on body with color-
+    $body.removeClass(function (index, css) {
+      return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
+    });
+
+    // Add class of currently active div
+    $body.addClass('color-' + $(this).data('color'));
+
+
+  //   $('.gradBack').fadeIn( "fast" );
+  // } else {
+  //   $('.gradBack').fadeOut("fast");
+  }
+});
+
+
+
+
+
+
+
+
+
+// Check to see if second panel (after intro) is visible
+// If that panel is visible, fade out the video
+// 
+var top_of_element = $('.whatIs').offset().top + 300;
+var bottom_of_element = $('.whatIs').offset().top + $('.whatIs').outerHeight() - 300;
+var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
+var top_of_screen = $(window).scrollTop();
+
+// console.log('bottom_of_element: ' + bottom_of_element)
+
+if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
+  // element is visible
+  // console.log('visible');
+  $('.uldVideo').addClass('fadeOut');
+  $('.uldVideo').removeClass('fadeIn');
+} else {
+  // element is not visible
+  // console.log('NOT visible');
+  $('.uldVideo').removeClass('fadeOut');
+  $('.uldVideo').addClass('fadeIn');
+}
+
+if (top_of_screen > bottom_of_element) {
+  // console.log('top_of_screen: ' + top_of_screen);
+  $('.uldVideo').addClass('fadeOut');
+  $('.uldVideo').removeClass('fadeIn');
+}
+
+
+
+
+
+
+
+// var theGradOffset = $('.gradBack').offset().top + 200;
+// var gradDistance = (theGradOffset - top_of_screen);
+
+// if (gradDistance < bottom_of_screen) {
+//   // $('.gradBack').css('border', '1px solid white')
+//   $('.gradBack').fadeIn( "fast" );
+// }
+// if (gradDistance > 200) {
+//   $('.gradBack').fadeIn( "fast" );
+//   // console.log('top_of_screen: ' + top_of_screen)
+// } else {
+//   $('.gradBack').hide();
+// }
+
+// console.log('gradDistance: ' + gradDistance)
+// // console.log('theGradOffset: ' + theGradOffset)
+
+}).scroll();
+
+
+
+
+
+
+
+
+const whatIs = basicScroll.create({
+elem: document.querySelector('.whatIsImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--whatIs': {
+    from: '400px',
+    to: '-380px'
+  }
+}
+})
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLORS -->
+// <!-- COLORS -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLORS -->
+// const colors = basicScroll.create({
+//   elem: document.querySelector('.gradBack'),
+//   from: 'top-bottom',
+//   to: 'middle-middle',
+//   props: {
+//     '--opacity': {
+//       from: 0,
+//       to: 1
+//     }
+//   }
+// })
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o FEATURES -->
+// <!-- FEATURES -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o FEATURES -->
+const lightweight = basicScroll.create({
+elem: document.querySelector('.lightImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--light': {
+    from: '500px',
+    to: '-430px'
+  }
+}
+})
+
+const heatRetention = basicScroll.create({
+elem: document.querySelector('.heatImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--heat': {
+    from: '500px',
+    to: '-430px'
+  }
+}
+})
+
+const repellent = basicScroll.create({
+elem: document.querySelector('.repImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--rep': {
+    from: '500px',
+    to: '-430px'
+  }
+}
+})
+
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
+// <!-- COLLECTIONS -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
+
+
+
+// <!-- ————————————————————————————————————o SMALL SCREEN -->
+// <!-- SMALL SCREEN -->
+const collecClassicSmall = basicScroll.create({
+elem: document.querySelector('#classic02 .mainImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--classicSmall': {
+    from: '260px',
+    to: '-100px'
+  }
+}
+})
+
+const collecSeamlessSmall = basicScroll.create({
+elem: document.querySelector('#seamless02 .mainImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--seamlessSmall': {
+    from: '260px',
+    to: '-70px'
+  }
+}
+})
+
+const collecCompactSmall = basicScroll.create({
+elem: document.querySelector('#compact02 .mainImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--compactSmall': {
+    from: '260px',
+    to: '20px'
+  }
+}
+})
+
+
+
+// <!-- ————————————————————————————————————o MAX HEIGHT: 1085px -->
+// <!-- MAX HEIGHT: 1085px -->
+const collecClassic1085 = basicScroll.create({
+elem: document.querySelector('#classic02 .mainImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--classic1085': {
+    from: '260px',
+    to: '-50px'
+  }
+}
+})
+
+const collecSeamless1085 = basicScroll.create({
+elem: document.querySelector('#seamless02 .mainImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--seamless1085': {
+    from: '260px',
+    to: '-260px'
+  }
+}
+})
+
+const collecCompact1085 = basicScroll.create({
+elem: document.querySelector('#compact02 .mainImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--compact1085': {
+    from: '260px',
+    to: '-110px'
+  }
+}
+})
+
+
+
+// <!-- ————————————————————————————————————o LARGE SCREEN -->
+// <!-- LARGE SCREEN -->
+const collecClassicLarge = basicScroll.create({
+elem: document.querySelector('#classic02 .mainImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--classicLarge': {
+    from: '260px',
+    to: '-180px'
+  }
+}
+})
+
+const collecSeamlessLarge = basicScroll.create({
+elem: document.querySelector('#seamless02 .mainImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--seamlessLarge': {
+    from: '260px',
+    to: '-340px'
+  }
+}
+})
+
+const collecCompactLarge = basicScroll.create({
+elem: document.querySelector('#compact02 .mainImage'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--compactLarge': {
+    from: '460px',
+    to: '-230px'
+  }
+}
+})
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o SOCIAL GALLERY -->
+// <!-- SOCIAL GALLERY -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o SOCIAL GALLERY -->
+const gall01 = basicScroll.create({
+elem: document.querySelector('.gall01 .floating'),
+from: 'top-bottom',
+to: 'bottom-top',
+props: {
+  '--galOne': {
+    from: '80px',
+    to: '-120px'
+  }
+}
+})
+
+const gall02 = basicScroll.create({
+elem: document.querySelector('.gall02 .floating'),
+from: 'top-bottom',
+to: 'middle-top',
+props: {
+  '--galTwo': {
+    from: '110px',
+    to: '-110px'
+  }
+}
+})
+
+const gall03 = basicScroll.create({
+elem: document.querySelector('.gall03 .floating'),
+from: 'top-bottom',
+to: 'middle-top',
+props: {
+  '--galThree': {
+    from: '50px',
+    to: '-450px'
+  }
+}
+})
+
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY COMPACT -->
+// <!-- GALLERY COMPACT -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY COMPACT -->
+const violin = basicScroll.create({
+elem: document.querySelector('img.violin'),
+from: 'top-bottom',
+to: 'top-top',
+props: {
+  '--violin': {
+    from: '160px',
+    to: '0px'
+  }
+}
+})
+
+const gotham = basicScroll.create({
+elem: document.querySelector('.gotham'),
+from: 'top-bottom',
+to: 'middle-top',
+props: {
+  '--gotham': {
+    from: '160px',
+    to: '-50px'
+  }
+}
+})
+
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY CLASSIC -->
+// <!-- GALLERY CLASSIC -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY CLASSIC -->
+// const oculus = basicScroll.create({
+//   elem: document.querySelector('img.oculus'),
+//   from: 'top-bottom',
+//   to: 'middle-top',
+//   props: {
+//     '--oculus': {
+//       from: '220px',
+//       to: '0px'
+//     }
+//   }
+// })
+
+// const chinatown = basicScroll.create({
+//   elem: document.querySelector('.chinatown'),
+//   from: 'top-bottom',
+//   to: 'middle-top',
+//   props: {
+//     '--chinatown': {
+//       from: '200px',
+//       to: '-150px'
+//     }
+//   }
+// })
+
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o ULD FAMILY -->
+// <!-- ULD for the Whole Family -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o ULD FAMILY -->
+const field = basicScroll.create({
+elem: document.querySelector('.paraJacket'),
+from: 'top-bottom',
+to: 'middle-top',
+props: {
+  '--field': {
+    from: '400px',
+    to: '-220px'
+  }
+}
+})
+
+
+
+
+
+
+
+
+
+        </script>

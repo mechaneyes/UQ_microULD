@@ -11,7 +11,8 @@ $(window).scroll(function () {
   var $window = $(window),
     $body = $('body'),
     // $body = $('#coloursScrl'),
-    $panel = $('section');
+    $panel = $('section'),
+    $panel = $('.colorChange');
 
   // Change 33% earlier than scroll position so colour is there when you arrive.
   var scroll = $window.scrollTop() + ($window.height() / 3);
@@ -263,7 +264,7 @@ const collecSeamless1085 = basicScroll.create({
   props: {
     '--seamless1085': {
       from: '260px',
-      to: '-520px'
+      to: '-260px'
     }
   }
 })
@@ -275,7 +276,7 @@ const collecCompact1085 = basicScroll.create({
   props: {
     '--compact1085': {
       from: '260px',
-      to: '-200px'
+      to: '-110px'
     }
   }
 })
@@ -349,8 +350,8 @@ const gall02 = basicScroll.create({
   to: 'middle-top',
   props: {
     '--galTwo': {
-      from: '120px',
-      to: '-150px'
+      from: '110px',
+      to: '-110px'
     }
   }
 })
@@ -361,8 +362,8 @@ const gall03 = basicScroll.create({
   to: 'middle-top',
   props: {
     '--galThree': {
-      from: '150px',
-      to: '-150px'
+      from: '50px',
+      to: '-450px'
     }
   }
 })
