@@ -659,6 +659,31 @@ body {
     margin-top: 30px;
 }
 
+#coloursScrl .heatGall {
+    position: relative;
+    min-height: 100vh;
+    margin: 400px 0 100px;
+    img {
+        width: 100%;
+    }
+    .heatCopy {
+        position: absolute;
+        top: 17%;
+        right: 3%;
+        width: 48%;
+        p, h2 {
+            margin-bottom: 10px;
+            color: #264e62;
+            text-align: left !important;
+        }
+        .heatCta {
+            left: 0;
+            margin-left: 0;
+        }
+    }
+}
+
+
 .heatCta {
     display: block;
     position: relative;
