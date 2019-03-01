@@ -1421,12 +1421,18 @@ body {
 <!-- endbuild -->
 
 
-
+<link href="http://staging-na-uniqlo.demandware.net/on/demandware.static/Sites-UniqloUS-Site/-/default/v1551358691132/css/allinone.css" rel="stylesheet" type="text/css" />
 
 <script>
 
 
-$('link[rel=stylesheet][href~="http://staging-na-uniqlo.demandware.net/on/demandware.static/Sites-UniqloUS-Site/-/default/v1551358691132/css/allinone.css"]').remove();
+// $('link[rel=stylesheet][href~="http://staging-na-uniqlo.demandware.net/on/demandware.static/Sites-UniqloUS-Site/-/default/v1551358691132/css/allinone.css"]').remove();
+
+
+
+var allCSS = match(new RegExp('http://' + "(.*)" + 'allinone.css'));
+console.log('allCSS: ' + allCSS)
+
 
 
 $(function() {

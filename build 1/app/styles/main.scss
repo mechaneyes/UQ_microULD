@@ -66,9 +66,10 @@ body {
         margin: 0 0 10px;
         text-align: center;
         font-family: $font-UQReg;
-        font-size: 60px;
+        font-size: 54px;
         color: white;
-        letter-spacing: 7px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
         border-bottom: none;
     }
     h3 {
@@ -142,7 +143,7 @@ body {
                 border-radius: 50%;
             }
             h2 {
-                margin: 40px 0;
+                margin: 40px 0 20px;
                 text-transform: uppercase;
             }
         }
@@ -171,11 +172,13 @@ body {
                 overflow: hidden;
                 .tick {
                     display: none;
+                    // margin-bottom: 12px;
                     font-family: $font-UQReg;
                     font-size: 80px;
                     color: red;
+                    font-weight: 700;
                     text-transform: uppercase;
-                    line-height: normal;
+                    line-height: 1.1;
                     text-align: left;
                 }
                 .slick-slide.tick {
@@ -628,6 +631,7 @@ body {
     font-family: $font-UQBold;
     font-size: 1.1vw;
     color: white;
+    font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
     border: 3px solid white;

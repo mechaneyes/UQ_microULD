@@ -346,29 +346,29 @@ const gall03 = basicScroll.create({
 // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY COMPACT -->
 // <!-- GALLERY COMPACT -->
 // <!-- ————————————————————————————————————o————————————————————————————————————o GALLERY COMPACT -->
-const violin = basicScroll.create({
-  elem: document.querySelector('img.violin'),
-  from: 'top-bottom',
-  to: 'top-top',
-  props: {
-    '--violin': {
-      from: '160px',
-      to: '0px'
-    }
-  }
-})
+// const violin = basicScroll.create({
+//   elem: document.querySelector('img.violin'),
+//   from: 'top-bottom',
+//   to: 'top-top',
+//   props: {
+//     '--violin': {
+//       from: '160px',
+//       to: '0px'
+//     }
+//   }
+// })
 
-const gotham = basicScroll.create({
-  elem: document.querySelector('.gotham'),
-  from: 'top-bottom',
-  to: 'middle-top',
-  props: {
-    '--gotham': {
-      from: '160px',
-      to: '-50px'
-    }
-  }
-})
+// const gotham = basicScroll.create({
+//   elem: document.querySelector('.gotham'),
+//   from: 'top-bottom',
+//   to: 'middle-top',
+//   props: {
+//     '--gotham': {
+//       from: '160px',
+//       to: '-50px'
+//     }
+//   }
+// })
 
 
 

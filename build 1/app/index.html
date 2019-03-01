@@ -12,7 +12,8 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-    <link href="https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/css/allinone.css" rel="stylesheet" type="text/css" />
+	<link href="https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/css/allinone.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/on/demandware.static/Sites-UniqloUS-Site/-/default/v1551358691132/css/fontfaces.css" type="text/css" rel="preconnect" crossorigin/>
 	<link href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
@@ -446,11 +447,25 @@
 
 
 
+<script>
+	
+	
+	
+	
+	// Stripping out allinone.css
+	// 
+	// Searches for the string "allinone" across link tags on
+	// the webpage and removes that element(s)
+	// 
+	$('link[href*="allinone"]').each(function() {
+		// console.log('allinone.css found');
+		var allInElement = $( this ).get( 0 );
+		// console.log( "Found - " + allInElement.nodeName )
+		$(allInElement).remove()
+	});
+	
 
-	<script>
 
-
-$('link[rel=stylesheet][href~="http://staging-na-uniqlo.demandware.net/on/demandware.static/Sites-UniqloUS-Site/-/default/v1551358691132/css/allinone.css"]').remove();
 
 
     $(function() {
