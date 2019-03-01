@@ -14,15 +14,16 @@
     <!-- endbuild -->
 	<link href="https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/css/allinone.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="/on/demandware.static/Sites-UniqloUS-Site/-/default/v1551358691132/css/fontfaces.css" type="text/css" rel="preconnect" crossorigin/>
-	<link href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
 
 <body>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
+
+	
     <video class="uldVideo" class="video-js" preload="auto" height="auto" muted autoplay loop>
         <source src="//uniqlo.scene7.com/e2/UNIQLO/us_site_assets/video_assets/2018/09_uld/uld18fw.mp4" type='video/mp4'>
     </video>
@@ -437,13 +438,9 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/basicscroll@2.1.1/dist/basicScroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="//unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/basicscroll@2.1.1/dist/basicScroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
 
 
@@ -452,93 +449,96 @@
 	
 	
 	
-	// Stripping out allinone.css
-	// 
-	// Searches for the string "allinone" across link tags on
-	// the webpage and removes that element(s)
-	// 
+// Stripping out allinone.css
+// 
+// Searches for the string "allinone" across link tags on
+// the webpage and removes that element(s)
+// 
+(function () {
+
 	$('link[href*="allinone"]').each(function() {
-		// console.log('allinone.css found');
+		console.log('allinone.css found');
 		var allInElement = $( this ).get( 0 );
-		// console.log( "Found - " + allInElement.nodeName )
+		console.log( "Found - " + allInElement.nodeName )
 		$(allInElement).remove()
 	});
+
+})();
 	
 
 
 
 
-    $(function() {
+$(function() {
 
 
-		// <!-- ————————————————————————————————————o CAROUSELS -->
-		// <!-- These functions live in main.js -->
-        $('.ticker').slick({
-            vertical: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed: 180,
-            autoplay: true,
-            autoplaySpeed: 1000,
-            arrows: false
-		});
-		
-        $('.colorRotator').slick({
-            speed: 14000,
-            autoplay: true,
-            autoplaySpeed: 0,
-            cssEase: 'linear',
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false
-		});
-
-		$('.colorRotaFasta').slick({
-            speed: 9000,
-            autoplay: true,
-            autoplaySpeed: 0,
-            cssEase: 'linear',
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false
-		});
-
-
-		// <!-- ————————————————————————————————————o CAROUSEL REVERSED -->
-        // <!-- Had to build this custo setup to reverse the order of carousel -->
-
-        var autoplaySpeed = 2000;
-        var autoplayOn = true;
-
-        var $slickRoot = $('.colorRotBack');
-
-        $slickRoot.on('init', function() {
-            var $slickList = $slickRoot.find('.slick-list');
-
-            $slickList.mouseenter(function() {
-                autoplayOn = false;
-            });
-            $slickList.mouseleave(function() {
-                autoplayOn = true;
-            });
-
-            window.setInterval(function() {
-                if (!autoplayOn) return;
-                $slickRoot.slick('slickPrev');
-            }, autoplaySpeed);
-        });
-
-        $slickRoot.slick({
-            infinite: true,
-			autoplay: false,
-			autoplaySpeed: 0,
-			speed: 14000,
-			// autoplaySpeed: 1000,
-            cssEase: 'linear',
-            arrows: false
-        });
-	})
+	// <!-- ————————————————————————————————————o CAROUSELS -->
+	// 
+	$('.ticker').slick({
+		vertical: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		speed: 180,
+		autoplay: true,
+		autoplaySpeed: 1000,
+		arrows: false
+	});
 	
+	$('.colorRotator').slick({
+		speed: 14000,
+		autoplay: true,
+		autoplaySpeed: 0,
+		cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false
+	});
+
+	$('.colorRotaFasta').slick({
+		speed: 9000,
+		autoplay: true,
+		autoplaySpeed: 0,
+		cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false
+	});
+
+
+	// <!-- ————————————————————————————————————o CAROUSEL REVERSED -->
+	// <!-- Had to build this custom setup to reverse the order of middle carousel -->
+
+	var autoplaySpeed = 2000;
+	var autoplayOn = true;
+
+	var $slickRoot = $('.colorRotBack');
+
+	$slickRoot.on('init', function() {
+		var $slickList = $slickRoot.find('.slick-list');
+
+		$slickList.mouseenter(function() {
+			autoplayOn = false;
+		});
+		$slickList.mouseleave(function() {
+			autoplayOn = true;
+		});
+
+		window.setInterval(function() {
+			if (!autoplayOn) return;
+			$slickRoot.slick('slickPrev');
+		}, autoplaySpeed);
+	});
+
+	$slickRoot.slick({
+		infinite: true,
+		autoplay: false,
+		autoplaySpeed: 0,
+		speed: 14000,
+		// autoplaySpeed: 1000,
+		cssEase: 'linear',
+		arrows: false
+	});
+})
 
 
 
@@ -551,34 +551,398 @@
 
 
 
-	// <!-- ————————————————————————————————————o INITIALIZE PARALLAX ELEMENTS -->
-	// <!-- These functions live in main.js -->
-    setTimeout(function() {
-        whatIs.start()
-        // anchors.start()
-        colors.start()
-        repellent.start()
-        // fieldTesting.start()
-		lightweight.start()
-		heatRetention.start()
 
-		collecClassicSmall.start()
-		collecSeamlessSmall.start()
-		collecCompactSmall.start()
+// <!-- ————————————————————————————————————o INITIALIZE PARALLAX ELEMENTS -->
+// <!-- These functions live in main.js -->
+setTimeout(function() {
+	whatIs.start()
+	// anchors.start()
+	colors.start()
+	repellent.start()
+	// fieldTesting.start()
+	lightweight.start()
+	heatRetention.start()
 
-		collecClassic1085.start()
-		collecSeamless1085.start()
-		collecCompact1085.start()
+	collecClassicSmall.start()
+	collecSeamlessSmall.start()
+	collecCompactSmall.start()
 
-		collecClassicLarge.start()
-		collecSeamlessLarge.start()
-		collecCompactLarge.start()
+	collecClassic1085.start()
+	collecSeamless1085.start()
+	collecCompact1085.start()
 
-        gall01.start()
-        gall02.start()
-        gall03.start()
-    }, 2000)
-    </script>
+	collecClassicLarge.start()
+	collecSeamlessLarge.start()
+	collecCompactLarge.start()
+
+	gall01.start()
+	gall02.start()
+	gall03.start()
+}, 2000)
+
+
+
+
+$(window).scroll(function () {
+
+  
+  
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLOR CHANGE -->
+// <!-- COLOR CHANGE ON SCROLL -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLOR CHANGE -->
+var $window = $(window),
+  $body = $('body'),
+  $panel = $('.colorChange');
+
+// Change 33% earlier than scroll position so colour is there when you arrive.
+var scroll = $window.scrollTop() + ($window.height() / 3);
+
+$panel.each(function () {
+  var $this = $(this);
+
+  // if position is within range of this panel.
+  // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
+  // Remember we set the scroll to 33% earlier in scroll var.
+  if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+
+	// Remove all classes on body with color-
+	$body.removeClass(function (index, css) {
+	  return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
+	});
+
+	// Add class of currently active div
+	$body.addClass('color-' + $(this).data('color'));
+  }
+});
+
+
+
+
+
+
+
+
+
+// Check to see if second panel (after intro) is visible
+// If that panel is visible, fade out the video
+// 
+var top_of_element = $('.whatIs').offset().top + 300;
+var bottom_of_element = $('.whatIs').offset().top + $('.whatIs').outerHeight() - 300;
+var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
+var top_of_screen = $(window).scrollTop();
+
+// console.log('bottom_of_element: ' + bottom_of_element)
+
+if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
+  // element is visible
+  // console.log('visible');
+  $('.uldVideo').addClass('fadeOut');
+  $('.uldVideo').removeClass('fadeIn');
+} else {
+  // element is not visible
+  // console.log('NOT visible');
+  $('.uldVideo').removeClass('fadeOut');
+  $('.uldVideo').addClass('fadeIn');
+}
+
+if (top_of_screen > bottom_of_element) {
+  // console.log('top_of_screen: ' + top_of_screen);
+  $('.uldVideo').addClass('fadeOut');
+  $('.uldVideo').removeClass('fadeIn');
+}
+
+}).scroll();
+
+
+
+
+
+
+
+
+const whatIs = basicScroll.create({
+	elem: document.querySelector('.whatIsImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+	'--whatIs': {
+		from: '400px',
+		to: '-380px'
+	}
+	}
+})
+
+
+
+
+
+
+
+const colors = basicScroll.create({
+	elem: document.querySelector('.gradBack'),
+	from: 'top-bottom',
+	to: 'top-middle',
+	props: {
+	'--opacity': {
+		from: 0,
+		to: 1
+	}
+	}
+})
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o FEATURES -->
+// <!-- FEATURES -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o FEATURES -->
+const lightweight = basicScroll.create({
+	elem: document.querySelector('.lightImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+	'--light': {
+		from: '500px',
+		to: '-430px'
+	}
+	}
+})
+
+const heatRetention = basicScroll.create({
+	elem: document.querySelector('.heatImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+	'--heat': {
+		from: '500px',
+		to: '-430px'
+	}
+	}
+})
+
+const repellent = basicScroll.create({
+	elem: document.querySelector('.repImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+	'--rep': {
+		from: '500px',
+		to: '-430px'
+	}
+	}
+})
+
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
+// <!-- COLLECTIONS -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTIONS -->
+
+
+
+// <!-- ————————————————————————————————————o SMALL SCREEN -->
+// <!-- SMALL SCREEN -->
+const collecClassicSmall = basicScroll.create({
+	elem: document.querySelector('#classic02 .mainImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+		'--classicSmall': {
+			from: '260px',
+			to: '-580px'
+		}
+	}
+})
+
+const collecSeamlessSmall = basicScroll.create({
+	elem: document.querySelector('#seamless02 .mainImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+		'--seamlessSmall': {
+			from: '260px',
+			to: '-590px'
+		}
+	}
+})
+
+const collecCompactSmall = basicScroll.create({
+	elem: document.querySelector('#compact02 .mainImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+		'--compactSmall': {
+			from: '260px',
+			to: '-200px'
+		}
+	}
+})
+
+
+
+// <!-- ————————————————————————————————————o MAX HEIGHT: 1085px -->
+// <!-- MAX HEIGHT: 1085px -->
+const collecClassic1085 = basicScroll.create({
+	elem: document.querySelector('#classic02 .mainImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+		'--classic1085': {
+			from: '260px',
+			to: '-300px'
+		}
+	}
+})
+
+const collecSeamless1085 = basicScroll.create({
+	elem: document.querySelector('#seamless02 .mainImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+		'--seamless1085': {
+			from: '260px',
+			to: '-520px'
+		}
+	}
+})
+
+const collecCompact1085 = basicScroll.create({
+	elem: document.querySelector('#compact02 .mainImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+		'--compact1085': {
+			from: '260px',
+			to: '-200px'
+		}
+	}
+})
+
+
+
+// <!-- ————————————————————————————————————o LARGE SCREEN -->
+// <!-- LARGE SCREEN -->
+const collecClassicLarge = basicScroll.create({
+	elem: document.querySelector('#classic02 .mainImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+		'--classicLarge': {
+			from: '260px',
+			to: '-180px'
+		}
+	}
+})
+
+const collecSeamlessLarge = basicScroll.create({
+	elem: document.querySelector('#seamless02 .mainImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+		'--seamlessLarge': {
+			from: '260px',
+			to: '-340px'
+		}
+	}
+})
+
+const collecCompactLarge = basicScroll.create({
+	elem: document.querySelector('#compact02 .mainImage'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+		'--compactLarge': {
+			from: '460px',
+			to: '-230px'
+		}
+	}
+})
+
+
+
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o SOCIAL GALLERY -->
+// <!-- SOCIAL GALLERY -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o SOCIAL GALLERY -->
+const gall01 = basicScroll.create({
+	elem: document.querySelector('.gall01 .floating'),
+	from: 'top-bottom',
+	to: 'bottom-top',
+	props: {
+		'--galOne': {
+			from: '80px',
+			to: '-120px'
+		}
+	}
+})
+
+const gall02 = basicScroll.create({
+	elem: document.querySelector('.gall02 .floating'),
+	from: 'top-bottom',
+	to: 'middle-top',
+	props: {
+		'--galTwo': {
+			from: '120px',
+			to: '-150px'
+		}
+	}
+})
+
+const gall03 = basicScroll.create({
+	elem: document.querySelector('.gall03 .floating'),
+	from: 'top-bottom',
+	to: 'middle-top',
+	props: {
+		'--galThree': {
+			from: '150px',
+			to: '-150px'
+		}
+	}
+})
+
+
+
+
+
+
+// <!-- ————————————————————————————————————o————————————————————————————————————o ULD FAMILY -->
+// <!-- ULD for the Whole Family -->
+// <!-- ————————————————————————————————————o————————————————————————————————————o ULD FAMILY -->
+const field = basicScroll.create({
+	elem: document.querySelector('.paraJacket'),
+	from: 'top-bottom',
+	to: 'middle-top',
+	props: {
+		'--field': {
+			from: '400px',
+			to: '-220px'
+		}
+	}
+})
+
+
+
+
+
+</script>
 </body>
 
 </html>
